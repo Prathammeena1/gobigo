@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'gobigo';
+    src: url('../fonts/go_font_v38.ttf');
+}
+@font-face {
+    font-family: 'rubik';
+    src: url('../static/fonts/Rubik-Regular.7dad6ed3.ttf');
+}
+
+:root {
+    --primary-color: #FF6C39; /* Example primary color */
+    --secondary-color: #2274E0; /* Example secondary color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "rubik";
+}
+
+.no-scrollbar::-webkit-scrollbar{
+    display: none;
+}

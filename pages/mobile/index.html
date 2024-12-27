@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabs - Book Online Cab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+
+<body class="bg-gray-100">
+  <div class="max-w-md mx-auto bg-white shadow-md overflow-hidden">
+    <nav class="w-full fixed z-20">
+      <!-- Header -->
+      <div class="flex items-center p-4 bg-orange-500 text-white">
+        <button class="mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <h1 class="text-lg font-semibold">Cabs - Book Online Cab</h1>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-200 bg-zinc-50/[.5] backdrop-blur-lg relative top-[-1px]">
+        <button class="flex-1 text-center py-3 text-sm font-bold text-blue-500 border-b-2 border-blue-500"
+          data-tab="outstation">
+          Outstation Cabs
+        </button>
+        <button class="flex-1 text-center py-3 text-sm font-bold text-gray-500 border-b-2 border-transparent"
+          data-tab="airport">
+          Airport Cabs
+        </button>
+        <button class="flex-1 text-center py-3 text-sm font-bold text-gray-500 border-b-2 border-transparent"
+          data-tab="hourly">
+          Hourly Rentals
+        </button>
+      </div>
+    </nav>
+
+
+
+    <!-- Content for Outstation Cabs -->
+    <div id="outstation" class="tab-content pt-28">
+      <div class="bg-gray-100 p-3 text-sm flex items-center">
+        <span class="bg-red-500 text-white px-2 py-0.5 text-xs rounded mr-2">New</span>
+        Add stops in between your pickup and drop location
+        <a href="#" class="text-blue-500 underline ml-1">know more</a>
+      </div>
+
+      <div class="flex justify-center p-4">
+        <button class="px-6 py-2 text-sm font-bold bg-blue-100 text-blue-500 rounded-l-lg">One Way</button>
+        <button class="px-6 py-2 text-sm font-bold bg-gray-200 text-gray-500 rounded-r-lg">Round Trip</button>
+      </div>
+
+      <div class="p-4 relative">
+        <!-- Pickup Location -->
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-zinc-500 ">From (Area, Street or Landmark)</label>
+          <input type="text" id="pickupOutstation" placeholder="Enter pickup location"
+            class="w-full border-gray-300 rounded-lg pt-2 font-bold placeholder:text-black placeholder:font-bold text-lg focus:outline-none" />
+        </div>
+
+        <!-- Drop Location -->
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-zinc-500 ">To (Area, Street or Landmark)</label>
+          <input type="text" id="dropOutstation" placeholder="Enter drop location"
+            class="w-full border-gray-300 rounded-lg pt-2 font-bold placeholder:text-black placeholder:font-bold text-lg focus:outline-none" />
+        </div>
+
+
+        <!-- Reverse Locations Button -->
+        <button class="absolute top-1/2 right-[5vw]" onclick="reverseLocations('pickupOutstation', 'dropOutstation')">
+          <span style="z-index:2" class="HomeSearchWidgetstyles__SwapIconWrap-sc-1rvppov-19 cgRmBb"><svg
+              xmlns="https://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="2rem" height="2rem"
+              class="SwapIcon-sc-1md20rj-0 dBAkqA">
+              <path
+                d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z"
+                fill="#647A97" fill-rule="nonzero"></path>
+            </svg></span>
+        </button>
+      </div>
+
+
+      <!-- Stops Section -->
+      <div id="stopsSection" class="px-4">
+        <div id="stopsContainer" class="space-y-4"></div>
+        <button id="addStopBtn" class="text-[var(--secondary-color)] font-bold rounded-lg">
+          + Add Stop
+        </button>
+      </div>
+
+
+    </div>
+
+
+    <!-- Content for Airport Cabs -->
+    <div id="airport" class="tab-content hidden pt-28">
+      <div class="p-4 relative">
+        <!-- Pickup Location -->
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-zinc-500 ">From (Area, Street or Landmark)</label>
+          <input type="text" id="pickupAirport" placeholder="Enter pickup location"
+            class="w-full border-gray-300 rounded-lg pt-2 font-bold placeholder:text-black placeholder:font-bold text-lg focus:outline-none" />
+        </div>
+
+        <!-- Drop Location -->
+        <div>
+          <label class="block text-xs font-medium text-zinc-500 ">To (Area, Street or Landmark)</label>
+          <input type="text" id="dropAirport" placeholder="Enter drop location"
+            class="w-full border-gray-300 rounded-lg pt-2 font-bold placeholder:text-black placeholder:font-bold text-lg focus:outline-none" />
+        </div>
+
+        <!-- Reverse Button -->
+        <button class="absolute top-1/2 right-[5vw]" onclick="reverseLocations('pickupAirport', 'dropAirport')">
+          <span style="z-index:2" class="HomeSearchWidgetstyles__SwapIconWrap-sc-1rvppov-19 cgRmBb"><svg
+              xmlns="https://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="2rem" height="2rem"
+              class="SwapIcon-sc-1md20rj-0 dBAkqA">
+              <path
+                d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z"
+                fill="#647A97" fill-rule="nonzero"></path>
+            </svg></span>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Content for Hourly Rentals -->
+    <div id="hourly" class="tab-content hidden pt-28">
+      <div class="max-w-sm mx-auto p-4 bg-white shadow-md rounded-lg">
+        <!-- Pickup Location -->
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-zinc-500 ">From (Area, Street or Landmark)</label>
+          <input type="text" placeholder="Enter pickup location"
+            class="w-full border-gray-300 rounded-lg pt-2 font-bold placeholder:text-black  placeholder:font-bold text-lg focus:outline-none " />
+        </div>
+
+        <!-- Pickup Date and Time -->
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-zinc-500 ">Pickup date and time</label>
+          <p class="text-lg font-semibold">14 Dec, 10:00 AM Sat</p>
+        </div>
+
+        <!-- Package Preference -->
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-zinc-500 mb-4 ">Package Preference</label>
+          <div class="flex justify-between gap-2 overflow-y-auto no-scrollbar">
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">1
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">2
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">3
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">4
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">5
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">6
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">7
+              hr</button>
+            <button class="px-4 flex-shrink-0 w-fit py-2 text-sm font-medium bg-blue-100 text-blue-500 rounded-lg">8
+              hr</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Search Button -->
+    <div class="p-4">
+      <button class="w-full bg-orange-500 text-white text-sm font-medium py-3 rounded-lg hover:bg-orange-600">
+        SEARCH
+      </button>
+    </div>
+  </div>
+
+  <!-- Safe Travel Section -->
+  <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden mt-6 p-4">
+    <h2 class="text-lg font-medium mb-4">#SafeTravel</h2>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="p-3 border border-gray-300 rounded-lg">
+        <h3 class="text-sm font-medium text-gray-800">With safety shield</h3>
+        <p class="text-sm text-gray-600">
+          Ensure contactless travel & distancing. Look for shield tag
+          protecting your cab
+        </p>
+      </div>
+      <div class="p-3 border border-gray-300 rounded-lg">
+        <h3 class="text-sm font-medium text-gray-800">Vaccinated Drivers</h3>
+        <p class="text-sm text-gray-600">
+          Most of our drivers are vaccinated (with certificates) ensuring safe
+          travel for you
+        </p>
+      </div>
+    </div>
+    <a href="#" class="text-blue-500 text-sm mt-3 inline-block">Learn more</a>
+  </div>
+
+  <!-- Offers Section -->
+  <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden mt-6 p-4">
+    <h2 class="text-lg font-semibold mb-4">Offers for you</h2>
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Offer 1 -->
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Offer 1" class="w-full" />
+        <div class="p-3">
+          <h3 class="text-sm font-medium">LIVE: FLAT 10% OFF* on Cabs!</h3>
+          <p class="text-xs text-gray-500">Offer validity: 20th Dec'24</p>
+        </div>
+      </div>
+      <!-- Offer 2 -->
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Offer 2" class="w-full" />
+        <div class="p-3">
+          <h3 class="text-sm font-medium">
+            Explore our best offers for outstation cabs
+          </h3>
+          <p class="text-xs text-gray-500">Offer validity: Limited time</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Online Cab Booking Section -->
+  <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden mt-6 p-4">
+    <h2 class="text-lg font-semibold mb-4">Online Cab Booking on GoIbibo</h2>
+    <p class="text-sm text-gray-600">
+      Most of the Indian tourists prefer travelling to their preferred
+      destination via road. It is due to the fact that a road trip allows you
+      to enjoy the scenic beauty at your own pace. Moreover, the comfort of
+      travelling in a vehicle with your family and friends is unparalleled.
+      You can opt for online cab booking that...
+    </p>
+    <a href="#" class="text-blue-500 text-sm">Read More</a>
+  </div>
+
+  <!-- Cabs Booking FAQ Section -->
+  <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden mt-6 p-4">
+    <h2 class="text-lg font-semibold mb-4">Cabs Booking FAQ</h2>
+    <div class="mb-4">
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. How can I book cheap cabs online?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Goibibo helps you with online cab booking at the best prices,
+        comparatively much lower than the local vendors. Also, you can use
+        promo codes and offers on the Goibibo website & app on online cab
+        booking to get extra discounts.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. What are the advantages of online taxi booking?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Online taxi booking not only helps you with best prices but also helps
+        you with the convenience of paying through multiple payment options
+        (like Debit Card, Credit Card, eWallets etc.). You can easily compare
+        prices and choose various categories of...
+      </p>
+    </div>
+    <div class="mb-4">
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. How can I book cheap cabs online?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Goibibo helps you with online cab booking at the best prices,
+        comparatively much lower than the local vendors. Also, you can use
+        promo codes and offers on the Goibibo website & app on online cab
+        booking to get extra discounts.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. What are the advantages of online taxi booking?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Online taxi booking not only helps you with best prices but also helps
+        you with the convenience of paying through multiple payment options
+        (like Debit Card, Credit Card, eWallets etc.). You can easily compare
+        prices and choose various categories of...
+      </p>
+    </div>
+    <div class="mb-4">
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. How can I book cheap cabs online?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Goibibo helps you with online cab booking at the best prices,
+        comparatively much lower than the local vendors. Also, you can use
+        promo codes and offers on the Goibibo website & app on online cab
+        booking to get extra discounts.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. What are the advantages of online taxi booking?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Online taxi booking not only helps you with best prices but also helps
+        you with the convenience of paying through multiple payment options
+        (like Debit Card, Credit Card, eWallets etc.). You can easily compare
+        prices and choose various categories of...
+      </p>
+    </div>
+    <div class="mb-4">
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. How can I book cheap cabs online?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Goibibo helps you with online cab booking at the best prices,
+        comparatively much lower than the local vendors. Also, you can use
+        promo codes and offers on the Goibibo website & app on online cab
+        booking to get extra discounts.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-sm font-medium text-gray-800">
+        Q. What are the advantages of online taxi booking?
+      </h3>
+      <p class="text-sm text-gray-600">
+        Online taxi booking not only helps you with best prices but also helps
+        you with the convenience of paying through multiple payment options
+        (like Debit Card, Credit Card, eWallets etc.). You can easily compare
+        prices and choose various categories of...
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-sm font-bold text-zinc-500 mb-6">Top Cab Routes</h2>
+      <ul class="list-none">
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Jaipur Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Agra Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Pune Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Pune to Mumbai Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Chandigarh Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Dehradun Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Haridwar Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Chandigarh to Shimla Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Chennai to Pondicherry Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Mathura Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Haldwani Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Manali Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bangalore to Mysore Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Rishikesh Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Jaipur to Delhi Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Dehradun to Delhi Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bhubaneswar to Puri Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Siliguri to Gangtok Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Bareilly Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mysore to Coorg Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Goa Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Ahmedabad to Vadodara Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bangalore to Hyderabad Cab
+        </li>
+      </ul>
+    </div>
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-sm font-bold text-zinc-500 mb-6">Top Cab Routes</h2>
+      <ul class="list-none">
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Jaipur Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Agra Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Pune Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Pune to Mumbai Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Chandigarh Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Dehradun Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Haridwar Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Chandigarh to Shimla Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Chennai to Pondicherry Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Mathura Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Haldwani Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Manali Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bangalore to Mysore Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Rishikesh Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Jaipur to Delhi Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Dehradun to Delhi Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bhubaneswar to Puri Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Siliguri to Gangtok Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Bareilly Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mysore to Coorg Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Goa Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Ahmedabad to Vadodara Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bangalore to Hyderabad Cab
+        </li>
+      </ul>
+    </div>
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-sm font-bold text-zinc-500 mb-6">Top Cab Routes</h2>
+      <ul class="list-none">
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Jaipur Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Agra Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Pune Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Pune to Mumbai Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Chandigarh Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Dehradun Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Haridwar Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Chandigarh to Shimla Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Chennai to Pondicherry Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Mathura Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Haldwani Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Manali Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bangalore to Mysore Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Rishikesh Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Jaipur to Delhi Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Dehradun to Delhi Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bhubaneswar to Puri Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Siliguri to Gangtok Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Bareilly Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mysore to Coorg Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Goa Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Ahmedabad to Vadodara Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Bangalore to Hyderabad Cab
+        </li>
+      </ul>
+    </div>
+
+    <hr class="border-[5px] bg[#E0E7EF]">
+
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-sm font-bold text-zinc-500 mb-6">Top Cab Routes</h2>
+      <ul class="list-none">
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Jaipur Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Agra Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Pune Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Pune to Mumbai Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Chandigarh Cab
+        </li>
+      </ul>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-sm font-bold text-zinc-500 mb-6">Top Cab Routes</h2>
+      <ul class="list-none">
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Jaipur Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Agra Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Pune Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Pune to Mumbai Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Chandigarh Cab
+        </li>
+      </ul>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-sm font-bold text-zinc-500 mb-6">Top Cab Routes</h2>
+      <ul class="list-none">
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Jaipur Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Agra Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Mumbai to Pune Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Pune to Mumbai Cab
+        </li>
+        <li class="text-sm text-[var(--secondary-color)] font-medium">
+          Delhi to Chandigarh Cab
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../../js/script.js"></script>
+
+  <script src="./js/script.js"></script>
+
+
+
+</body>
+
+</html>

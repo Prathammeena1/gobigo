@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goibibo Cab Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="font-sans bg-gray-200">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-7 py-3">
+      <div class="h-8 font-bold text-[var(--primary-color)]">
+        <img class="h-full object-cover" src="../../static/images/gobigo-logo.png" alt="" />
+      </div>
+      <nav class="flex space-x-6 items-center">
+        <a href="#" class="hover:text-[var(--primary-color)]">Flights</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Hotels</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Trains</a>
+        <a href="#" class="text-[var(--primary-color)] border-b-2 border-[var(--primary-color)]">Cabs</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Bus</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Holidays</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Forex</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Insurance</a>
+      </nav>
+      <div class="flex space-x-4 items-center">
+        <a href="#" class="text-gray-600 hover:text-[var(--primary-color)]"><i class="ri-briefcase-3-line"></i> Manage
+          Booking</a>
+        <button class="px-4 py-2 border border-[var(--secondary-color)] rounded flex items-center gap-3">
+          <div
+            class="h-8 w-8 bg-[var(--primary-color)] rounded-full flex items-center justify-center uppercase font-bold text-white">
+            p
+          </div>
+          <h3 class="text-sm">Hey, Pratham...</h3>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main
+    class="page1 w-full bg-[url(https://gos3.ibcdn.com/gi-orange-theme-bg-1693817290.png)] bg-no-repeat bg-contain bg-top pt-5">
+    </div>
+    <h2 class="text-2xl px-44 font-semibold text-white mb-5">
+      Book Online Cab
+    </h2>
+    <div class="heroSection flex px-44 gap-6">
+      <div>
+        <div class="bg-white shadow-lg rounded-lg p-6 w-[35vw] mx-auto relative pb-16">
+          <!-- Tabs -->
+          <div class="flex justify-between mb-4">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="tripType" class=" peer" checked data-target="oneway">
+              <span class="text-lg text-zinc-600 font-bold peer-checked:text-blue-500 cursor-pointer leading-6">Outstation<br>One-way</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="tripType" class=" peer" data-target="roundtrip">
+              <span class="text-lg text-zinc-600 font-bold peer-checked:text-blue-500 cursor-pointer leading-6">Outstation<br>Round
+                trip</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="tripType" class=" peer" data-target="airport">
+              <span class="text-lg text-zinc-600 font-bold peer-checked:text-blue-500 cursor-pointer leading-6">Airport<br>transfer</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="tripType" class=" peer" data-target="hourly">
+              <span class="text-lg text-zinc-600 font-bold peer-checked:text-blue-500 cursor-pointer leading-6">Hourly<br>Rental</span>
+            </label>
+          </div>
+
+          <!-- Oneway Trip Section -->
+          <div id="oneway" class="tab-content space-y-4 relative">
+            <div>
+              <label class="block text-zinc-400 text-md">From</label>
+              <input id="pickupOneway" type="text" placeholder="Enter Pickup location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+            <div class="absolute w-fit  right-0">
+              <button onclick="reverseLocations('pickupOneway', 'dropOneway')"
+                class="">
+                <span style="z-index:2" class="HomeSearchWidgetstyles__SwapIconWrap-sc-1rvppov-19 cgRmBb"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="2rem" height="2rem" class="SwapIcon-sc-1md20rj-0 dBAkqA"><path d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z" fill="#647A97" fill-rule="nonzero"></path></svg></span>
+              </button>
+            </div>
+            <div>
+              <label class="block text-zinc-400 text-md">To</label>
+              <input id="dropOneway" type="text" placeholder="Enter Drop location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+
+            <!-- Container for stops (Oneway) -->
+            <div id="stopsContainerOneway" class="space-y-2 mt-4"></div>
+
+            <div id="addStopBtnOneway" class="flex items-center space-x-2">
+              <span class="text-blue-500 text-sm font-semibold cursor-pointer">+ Add Stops</span>
+              <span class="bg-red-500 text-white text-xs rounded-full px-2 py-1">New</span>
+            </div>
+
+            <div class="flex justify-between items-center border-b pb-2">
+              <!-- Pickup Date -->
+              <div class="relative">
+                <!-- Displayed Date -->
+                <div id="datePicker" class="cursor-pointer">
+                  <label class="block text-zinc-400 text-md">Pickup Date</label>
+                  <span id="selectedDate" class="font-semibold">15 Dec' 24</span>
+                </div>
+
+                <!-- Hidden Date Input -->
+                <input type="date" id="hiddenDateInput"
+                  class="absolute top-0 left-0 opacity-0 cursor-pointer w-full h-full" style="z-index: -1;" />
+              </div>
+              <!-- Divider -->
+              <div class="h-full border-l mx-4"></div>
+
+              <!-- Pickup Time -->
+              <div>
+                <label class="block text-zinc-400 text-md">Pickup Time</label>
+                <span class="text-black font-semibold text-sm">10:00 AM</span>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <!-- Roundtrip Section -->
+          <div id="roundtrip" class="tab-content space-y-4 hidden relative">
+            <div >
+              <label class="block text-zinc-400 text-md">From</label>
+              <input id="pickupRoundtrip" type="text" placeholder="Enter Pickup location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+            <div class="absolute w-fit  right-0">
+              <button onclick="reverseLocations('pickupRoundtrip', 'dropRoundtrip')"
+                class="">
+                <span style="z-index:2" class="HomeSearchWidgetstyles__SwapIconWrap-sc-1rvppov-19 cgRmBb"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="2rem" height="2rem" class="SwapIcon-sc-1md20rj-0 dBAkqA"><path d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z" fill="#647A97" fill-rule="nonzero"></path></svg></span>
+              </button>
+            </div>
+            <div>
+              <label class="block text-zinc-400 text-md">To</label>
+              <input id="dropRoundtrip" type="text" placeholder="Enter Drop location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+
+            <!-- Container for stops (Roundtrip) -->
+            <div id="stopsContainerRoundtrip" class="space-y-2 mt-4"></div>
+
+            <div id="addStopBtnRoundtrip" class="flex items-center space-x-2">
+              <span class="text-blue-500 text-sm font-semibold cursor-pointer">+ Add Stops</span>
+              <span class="bg-red-500 text-white text-xs rounded-full px-2 py-1">New</span>
+            </div>
+
+
+
+            <div class="flex justify-between items-center border-b pb-2">
+              <!-- Pickup Date -->
+              <div class="relative">
+                <!-- Displayed Date -->
+                <div id="datePicker" class="cursor-pointer">
+                  <label class="block text-zinc-400 text-md">Pickup Date</label>
+                  <span id="selectedDate" class="font-semibold">15 Dec' 24</span>
+                </div>
+
+                <!-- Hidden Date Input -->
+                <input type="date" id="hiddenDateInput"
+                  class="absolute top-0 left-0 opacity-0 cursor-pointer w-full h-full" style="z-index: -1;" />
+              </div>
+              <!-- Divider -->
+              <div class="h-full border-l mx-4"></div>
+
+              <!-- Pickup Time -->
+              <div>
+                <label class="block text-zinc-400 text-md">Pickup Time</label>
+                <span class="text-black font-semibold text-sm">10:00 AM</span>
+              </div>
+            </div>
+
+
+
+            <div class="flex justify-between items-center border-b pb-2">
+              <!-- Pickup Date -->
+              <div class="relative">
+                <!-- Displayed Date -->
+                <div id="datePicker" class="cursor-pointer">
+                  <label class="block text-zinc-400 text-md">Return Date</label>
+                  <span id="selectedDate" class="font-semibold">25 Dec' 24</span>
+                </div>
+
+                <!-- Hidden Date Input -->
+                <input type="date" id="hiddenDateInput"
+                  class="absolute top-0 left-0 opacity-0 cursor-pointer w-full h-full" style="z-index: -1;" />
+              </div>
+              <!-- Divider -->
+              <div class="h-full border-l mx-4"></div>
+
+              <!-- Pickup Time -->
+              <div>
+                <label class="block text-zinc-400 text-md">Pickup Time</label>
+                <span class="text-black font-semibold text-sm">5:00 PM</span>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- airport  -->
+          <div id="airport" class="tab-content space-y-4 hidden relative">
+            <div>
+              <label class="block text-zinc-400 text-md">From</label>
+              <input id="pickupAirport" type="text" placeholder="Enter Pickup location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+            <div class="absolute w-fit  right-0">
+              <button onclick="reverseLocations('pickupAirport', 'dropAirport')"
+                class="">
+                <span style="z-index:2" class="HomeSearchWidgetstyles__SwapIconWrap-sc-1rvppov-19 cgRmBb"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="2rem" height="2rem" class="SwapIcon-sc-1md20rj-0 dBAkqA"><path d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z" fill="#647A97" fill-rule="nonzero"></path></svg></span>
+              </button>
+            </div>
+            <div>
+              <label class="block text-zinc-400 text-md">To</label>
+              <input id="dropAirport" type="text" placeholder="Enter Drop location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+
+            <div class="flex justify-between items-center border-b pb-2">
+              <!-- Pickup Date -->
+              <div class="relative">
+                <!-- Displayed Date -->
+                <div id="datePicker" class="cursor-pointer">
+                  <label class="block text-zinc-400 text-md">Pickup Date</label>
+                  <span id="selectedDate" class="font-semibold">15 Dec' 24</span>
+                </div>
+
+                <!-- Hidden Date Input -->
+                <input type="date" id="hiddenDateInput"
+                  class="absolute top-0 left-0 opacity-0 cursor-pointer w-full h-full" style="z-index: -1;" />
+              </div>
+              <!-- Divider -->
+              <div class="h-full border-l mx-4"></div>
+
+              <!-- Pickup Time -->
+              <div>
+                <label class="block text-zinc-400 text-md">Pickup Time</label>
+                <span class="text-black font-semibold text-sm">10:00 AM</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="hourly" class="tab-content space-y-4 hidden relative">
+            <div>
+              <label class="block text-zinc-400 text-md">From</label>
+              <input type="text" placeholder="Enter Pickup location"
+                class="w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none" />
+            </div>
+
+            <div class="flex justify-between items-center border-b pb-2">
+              <!-- Pickup Date -->
+              <div class="relative">
+                <!-- Displayed Date -->
+                <div id="datePicker" class="cursor-pointer">
+                  <label class="block text-zinc-400 text-md">Pickup Date</label>
+                  <span id="selectedDate" class="font-semibold">15 Dec' 24</span>
+                </div>
+
+                <!-- Hidden Date Input -->
+                <input type="date" id="hiddenDateInput"
+                  class="absolute top-0 left-0 opacity-0 cursor-pointer w-full h-full" style="z-index: -1;" />
+              </div>
+              <!-- Divider -->
+              <div class="h-full border-l mx-4"></div>
+
+              <!-- Pickup Time -->
+              <div>
+                <label class="block text-zinc-400 text-md">Pickup Time</label>
+                <span class="text-black font-semibold text-sm">10:00 AM</span>
+              </div>
+            </div>
+
+
+            <div class="flex gap-4 items-center overflow-y-auto no-scrollbar">
+              <div class="flex-shrink-0 cursor-pointer">
+                1 hr (10 km)
+              </div>
+              <div class="flex-shrink-0 cursor-pointer">
+                2 hr (20 km)
+              </div>
+              <div class="flex-shrink-0 cursor-pointer">
+                3 hr (30 km)
+              </div>
+              <div class="flex-shrink-0 cursor-pointer">
+                4 hr (40 km)
+              </div>
+              <div class="flex-shrink-0 cursor-pointer">
+                5 hr (50 km)
+              </div>
+              <div class="flex-shrink-0 cursor-pointer">
+                6 hr (60 km)
+              </div>
+              <div class="flex-shrink-0 cursor-pointer">
+                7 hr (70 km)
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <button
+            class="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-1/2 bg-[var(--primary-color)] text-white py-4 rounded-full text-xl font-semibold hover:bg-orange-600">
+            SEARCH CABS
+          </button>
+        </div>
+      </div>
+
+      
+
+      <!-- Promotions -->
+      <section class="h-full">
+        <div class="h-1/2 w-full rounded-2xl overflow-hidden">
+          <img class="w-full h-full object-contain"
+            src="https://gos3.ibcdn.com/GI_Cab_HourlyRental_dweb_Home_Banner_v2-1673515307.png" alt="">
+        </div>
+        <div class="h-1/2 w-full overflow-hidden flex gap-4 mt-4">
+          <div class="w-1/2 h-full bg-zinc-100 rounded-xl overflow-hidden">
+            <img src="https://gos3.ibcdn.com/cab-icici-1733678767.jpg" alt="">
+            <div class="px-10 text-sm py-5 ">
+              <h3>LIVE: FLAT 10% OFF on Cabs!</h3>
+              <h4>20th Dec'24</h4>
+            </div>
+          </div>
+          <div class="w-1/2 h-full bg-zinc-100 rounded-xl overflow-hidden">
+            <img src="https://gos3.ibcdn.com/cab-icici-1733678767.jpg" alt="">
+            <div class="px-10 text-sm py-5 ">
+              <h3>LIVE: FLAT 10% OFF on Cabs!</h3>
+              <h4>20th Dec'24</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <div class="w-full flex items-center justify-center mt-10">
+    <button
+    style="background-image: linear-gradient(105deg, rgb(17, 73, 243), rgb(0, 195, 255) 100%);"
+        class="w-[14%] text-white py-2 rounded-full text-xl font-semibold hover:bg-orange-600 flex items-center justify-center gap-2">
+        Explore More
+        <i class="ri-arrow-down-circle-fill text-4xl"></i>
+      </button>
+  </div>
+
+  <div class="p-8 px-44">
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h1 class="text-2xl font-bold mb-4">Online Cab Booking on Golbibo</h1>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        Most of the Indian tourists prefer travelling to their preferred destination via road. It is due to the fact
+        that a road trip allows you to enjoy the scenic beauty at your own pace. Moreover, the comfort of travelling in
+        a vehicle with your family and friends is unparalleled. You can opt for online cab booking that will make your
+        journey hassle-free. You simply have to visit the Golbibo portal and select a cab.
+      </p>
+      <div id="hidden-content" class="hidden">
+        <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+          Due to the easy-to-use interface and quick menu options of Golbibo, online cab booking is not a difficult
+          process. In fact, cab booking is something which has become a part of our everyday life. You can also opt for
+          intercity car rentals in order to visit other cities.
+        </p>
+        <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+          The online taxi booking process on Golbibo can be completed within a couple of minutes. So, if you wish to
+          customize your cab booking package, Golbibo is your go-to website. All the car booking services available on
+          Golbibo are geared towards giving you the best-possible experience when it comes to cab booking.
+        </p>
+        <h2 class="text-xl font-semibold mt-8 mb-4">Book Your Cab Online</h2>
+        <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+          When you choose us for your cab booking requirements, we offer you premium services, and most importantly, high
+          reliability. Golbibo is considered one of the most popular car booking platforms. Besides that, you can also
+          visit the website for train, flight, and bus tickets. The best part is you can get top-notch cars for your
+          preferred destination.
+        </p>
+        <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+          Road trips are one of the most exciting ways to travel all across the country. There is so much to experience
+          and explore. Golbibo ensures that your road trip is an enjoyable experience.
+        </p>
+        <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+          The process of booking a cab on Golbibo is pretty simple. You just need to log in to Golbibo's official website
+          and provide all the required details. In order to book your cab, you have to fill in the city of your origin,
+          the destination, your departure date and timings. Once all the details are filled, simply click on the ‘Search’
+          option.
+        </p>
+        <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+          On the portal, you will get a wide range of cab options available at different prices. The prices depend on a
+          lot of factors such as the type of cab you are choosing, the in-car facilities provided, the route you are
+          taking to travel as well as your date of journey. You can select a cab which meets your travel requirements.
+        </p>
+      </div>
+      <button
+        id="read-more-btn"
+        class="text-[var(--secondary-color)] hover:underline font-semibold text-sm mt-2"
+        onclick="toggleReadMore()"
+      >
+        Read More
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-10 mb-4">Cabs Booking FAQ</h2>
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h1 class="text-2xl font-bold mb-4">Online Cab Booking on Golbibo</h1>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        Most of the Indian tourists prefer travelling to their preferred destination via road. It is due to the fact
+        that a road trip allows you to enjoy the scenic beauty at your own pace. Moreover, the comfort of travelling in
+        a vehicle with your family and friends is unparalleled. You can opt for online cab booking that will make your
+        journey hassle-free. You simply have to visit the Golbibo portal and select a cab.
+      </p>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        Due to the easy-to-use interface and quick menu options of Golbibo, online cab booking is not a difficult
+        process. In fact, cab booking is something which has become a part of our everyday life. You can also opt for
+        intercity car rentals in order to visit other cities.
+      </p>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        The online taxi booking process on Golbibo can be completed within a couple of minutes. So, if you wish to
+        customize your cab booking package, Golbibo is your go-to website. All the car booking services available on
+        Golbibo are geared towards giving you the best-possible experience when it comes to cab booking.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-4">Book Your Cab Online</h2>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        When you choose us for your cab booking requirements, we offer you premium services, and most importantly, high
+        reliability. Golbibo is considered one of the most popular car booking platforms. Besides that, you can also
+        visit the website for train, flight, and bus tickets. The best part is you can get top-notch cars for your
+        preferred destination.
+      </p>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        Road trips are one of the most exciting ways to travel all across the country. There is so much to experience
+        and explore. Golbibo ensures that your road trip is an enjoyable experience.
+      </p>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        The process of booking a cab on Golbibo is pretty simple. You just need to log in to Golbibo's official website
+        and provide all the required details. In order to book your cab, you have to fill in the city of your origin,
+        the destination, your departure date and timings. Once all the details are filled, simply click on the ‘Search’
+        option.
+      </p>
+      <p class="text-gray-700 mb-4 text-sm leading-5 font-medium">
+        On the portal, you will get a wide range of cab options available at different prices. The prices depend on a
+        lot of factors such as the type of cab you are choosing, the in-car facilities provided, the route you are
+        taking to travel as well as your date of journey. You can select a cab which meets your travel requirements.
+      </p>
+      <h2 class="text-xl font-semibold mt-8">Book a Cab for an Exciting Road Trip</h2>
+    </div>
+
+    <div class="bg-white p-8 rounded-lg shadow-md mt-20">
+      <!-- Top Cab Routes Section -->
+      <h2 class="text-lg font-bold mb-4">Top Cab Routes</h2>
+      <div class="grid grid-cols-4 gap-x-4 gap-y-1 text-blue-600">
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Jaipur Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Agra Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Mumbai To Pune Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Pune To Mumbai Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Dehradun Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Haridwar Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Chandigarh To Shimla Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Chennai To Pondicherry Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Haldwani Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Manali Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Bangalore To Mysore Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Delhi To Mathura Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Dehradun To Delhi Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Bhubaneswar To Puri Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Siliguri To Gangtok Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Jaipur To Delhi Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Mumbai To Goa Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Ahmedabad To Vadodara Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Bangalore To Hyderabad Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Mysore To Coorg Cab</a>
+      </div>
+
+      <!-- Cab from Top Cities Section -->
+      <h2 class="text-lg font-bold mt-8 mb-4">Cab from Top Cities</h2>
+      <div class="grid grid-cols-4 gap-x-4 gap-y-1 text-blue-600">
+        <a href="#" class="hover:underline text-sm font-medium">Delhi Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Goa Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Bangalore Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Chennai Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Hyderabad Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Kolkata Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Jaipur Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Pune Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Coimbatore Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Indore Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Mumbai Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Visakhapatnam Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Tirupati Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Ahmedabad Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Varanasi Taxi Services</a>
+        <a href="#" class="hover:underline text-sm font-medium">Noida Taxi Services</a>
+      </div>
+
+      <!-- Top Airport Cab Routes Section -->
+      <h2 class="text-lg font-bold mt-8 mb-4">Top Airport Cab Routes</h2>
+      <div class="grid grid-cols-4 gap-x-4 gap-y-1 text-blue-600">
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Bangalore Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Hyderabad Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Delhi Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Chennai Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab To Ahmedabad Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Kolkata Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Amritsar Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab To Bangalore Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Jaipur Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Patna Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Cab From Madurai Airport</a>
+        <a href="#" class="hover:underline text-sm font-medium">Pune To Mumbai Airport Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Srinagar Airport To Gulmarg Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Chandigarh To Delhi Airport Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Chennai Airport To Pondicherry Cab</a>
+        <a href="#" class="hover:underline text-sm font-medium">Mumbai Airport To Thane Cab</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gray-100 text-gray-800 px-56">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">Our Products</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">Domestic Hotels</a></li>
+            <li><a href="#" class="hover:underline text-xs ">International Hotels</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Domestic Flights</a></li>
+            <li><a href="#" class="hover:underline text-xs ">International Flights</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Bus Booking</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Train Ticket Booking</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Holiday Packages</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">Company</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">About Us</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Terms of Service</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Privacy Policy</a></li>
+            <li><a href="#" class="hover:underline text-xs ">User Agreement</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Customer Support</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Corporate Social Responsibility</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Blogs on Travel</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Careers</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Technology @ Goibibo</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">Travel Resources</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">Popular Bus Routes</a></li>
+            <li><a href="#" class="hover:underline text-xs ">PNR Status</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Airport Cabs</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Hotels in India</a></li>
+            <li><a href="#" class="hover:underline text-xs ">India Rail</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Goibibo Offers</a></li>
+            <li><a href="#" class="hover:underline text-xs ">City Guides</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">More Links</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">Cheap Flights</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Flight Schedules</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Popular Bus Cities</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Trains Near Me</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Hotels Near Me</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Advertise with Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-7 border-zinc-300">
+
+      <div class="w-full">
+        <p class="text-xs leading-5 opacity-[.8]">
+          Cabs from GhaziabadGhaziabad To Delhi Cabs |Ghaziabad To Shahjahanpur Cabs |Ghaziabad To Agra Cabs |Ghaziabad
+          To Bareilly Cabs |Ghaziabad To Mumbai Cabs |Ghaziabad To Mussoorie Cabs |Ghaziabad To Pilani Cabs |Ghaziabad
+          To Mathura Cabs |Ghaziabad To Auraiya Cabs |Ghaziabad To Ahmedabad CabsCabs from HaldwaniHaldwani To Delhi
+          Cabs |Haldwani To Shahjahanpur Cabs |Haldwani To Agra Cabs |Haldwani To Bareilly Cabs |Haldwani To Mussoorie
+          Cabs |Haldwani To Mathura Cabs |Haldwani To Ahmedabad Cabs |Haldwani To Aligarh Cabs |Haldwani To Varanasi
+          Cabs |Haldwani To Ambala CabsCabs from JodhpurJodhpur To Delhi Cabs |Jodhpur To Agra Cabs |Jodhpur To Mumbai
+          Cabs |Jodhpur To Mussoorie Cabs |Jodhpur To Pilani Cabs |Jodhpur To Mathura Cabs |Jodhpur To Ahmedabad Cabs
+          |Jodhpur To Bhuj Cabs |Jodhpur To Jaisalmer Cabs |Jodhpur To Mount-abu CabsCabs from ChandigarhChandigarh To
+          Delhi Cabs |Chandigarh To Agra Cabs |Chandigarh To Bareilly Cabs |Chandigarh To Mumbai Cabs |Chandigarh To
+          Mussoorie Cabs |Chandigarh To Pilani Cabs |Chandigarh To Mathura Cabs |Chandigarh To Ahmedabad Cabs
+          |Chandigarh To Dwarka Cabs |Chandigarh To Bhuj CabsCabs from VishakhapatnamVishakhapatnam To Tirupati Cabs
+          |Vishakhapatnam To Bangalore Cabs |Vishakhapatnam To Kolkata Cabs |Vishakhapatnam To Chennai Cabs
+          |Vishakhapatnam To Hyderabad Cabs |Vishakhapatnam To Bhubaneswar Cabs |Vishakhapatnam To Durgapur Cabs
+          |Vishakhapatnam To Raipur Cabs |Vishakhapatnam To Puri Cabs |Vishakhapatnam To Cuttack CabsCabs from
+          KolkataKolkata To Delhi Cabs |Kolkata To Agra Cabs |Kolkata To Bareilly Cabs |Kolkata To Mumbai Cabs |Kolkata
+          To Mathura Cabs |Kolkata To Ahmedabad Cabs |Kolkata To Jaisalmer Cabs |Kolkata To Porbandar Cabs |Kolkata To
+          Varanasi Cabs |Kolkata To Manali Cabs
+        </p>
+
+      </div>
+
+      <div class="mt-8 flex flex-col items-center md:flex-row justify-between">
+        <div class="flex space-x-4 mb-4 md:mb-0">
+          <a href="#" class="text-gray-500 hover:text-gray-700">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <!-- <path d="..."></path> -->
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-700">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <!-- <path d="..."></path> -->
+            </svg>
+          </a>
+        </div>
+
+        <div>
+          <h2 class="font-bold text-lg mb-4">Book Tickets Faster. Download our mobile Apps</h2>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-gray-200 p-2 rounded-md">
+              <!-- <img src="google-play.svg" alt="Google Play"> -->
+            </a>
+            <a href="#" class="bg-gray-200 p-2 rounded-md">
+              <!-- <img src="app-store.svg" alt="App Store"> -->
+            </a>
+          </div>
+        </div>
+
+        <div class="flex space-x-4">
+          <!-- <img src="payment-logos.svg" alt="Payment Logos"> -->
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p>&copy; 2023 Goibibo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../../js/script.js"></script>
+
+  <script>
+    const handleTab = () => {
+      // JavaScript to toggle tab content
+      document.querySelectorAll('input[name="tripType"]').forEach((radio) => {
+        radio.addEventListener('change', (event) => {
+          const targetId = event.target.getAttribute('data-target');
+
+          // Hide all tab contents
+          document.querySelectorAll('.tab-content').forEach((content) => {
+            content.classList.add('hidden');
+          });
+
+          // Show the selected tab content
+          document.getElementById(targetId).classList.remove('hidden');
+        });
+      });
+    }
+
+
+    function setupAddStops(stopsContainerId, addStopBtnId) {
+      const stopsContainer = document.getElementById(stopsContainerId);
+      const addStopBtn = document.querySelector(`#${addStopBtnId} span`);
+      let stopCount = 0;
+      const maxStops = 5;
+
+      addStopBtn.addEventListener("click", () => {
+        if (stopCount < maxStops) {
+          stopCount++;
+
+          // Create stop input and remove button
+          const stopDiv = document.createElement("div");
+          stopDiv.className = "flex items-center space-x-2";
+
+          const input = document.createElement("input");
+          input.type = "text";
+          input.placeholder = `Enter Stop ${stopCount}`;
+          input.className =
+            "w-full font-bold text-lg pt-2 pb-1 border-zinc-100  border-b text-gray-700 focus:outline-none";
+
+          const removeBtn = document.createElement("button");
+          removeBtn.textContent = "✖";
+          removeBtn.className =
+            "text-red-500 text-sm font-semibold cursor-pointer hover:text-red-700";
+
+          // Remove stop functionality
+          removeBtn.addEventListener("click", () => {
+            stopsContainer.removeChild(stopDiv);
+            stopCount--;
+            if (stopCount < maxStops) {
+              document.getElementById(addStopBtnId).classList.remove("hidden");
+            }
+          });
+
+          // Append input and remove button to the stop container
+          stopDiv.appendChild(input);
+          stopDiv.appendChild(removeBtn);
+          stopsContainer.appendChild(stopDiv);
+
+          // Hide the "Add Stops" button if max stops reached
+          if (stopCount >= maxStops) {
+            document.getElementById(addStopBtnId).classList.add("hidden");
+          }
+        }
+      });
+    }
+
+    // Initialize for Oneway Trip
+    setupAddStops("stopsContainerOneway", "addStopBtnOneway");
+
+    // Initialize for Roundtrip
+    setupAddStops("stopsContainerRoundtrip", "addStopBtnRoundtrip");
+
+    // Function to reverse values of Pickup and Drop inputs
+    function reverseLocations(pickupId, dropId) {
+      const pickupInput = document.getElementById(pickupId);
+      const dropInput = document.getElementById(dropId);
+
+      // Swap values
+      const temp = pickupInput.value;
+      pickupInput.value = dropInput.value;
+      dropInput.value = temp;
+    }
+
+
+    const handleDate = () => {
+      const datePicker = document.getElementById("datePicker");
+      const hiddenDateInput = document.getElementById("hiddenDateInput");
+      const selectedDate = document.getElementById("selectedDate");
+
+      // When clicking on the date display, focus the date input
+      datePicker.addEventListener("click", () => {
+        hiddenDateInput.click(); // Open the date picker
+      });
+
+      // Update the displayed date after selecting a date
+      hiddenDateInput.addEventListener("change", (event) => {
+        const dateValue = new Date(event.target.value);
+        const options = { day: "numeric", month: "short", year: "2-digit" };
+        const formattedDate = dateValue.toLocaleDateString("en-GB", options).replace(',', '');
+        selectedDate.textContent = formattedDate; // Set the selected date in the span
+      });
+    }
+
+
+   const toggleReadMore = () =>{
+    const hiddenContent = document.getElementById('hidden-content');
+    const readMoreBtn = document.getElementById('read-more-btn');
+    if (hiddenContent.classList.contains('hidden')) {
+      hiddenContent.classList.remove('hidden');
+      readMoreBtn.textContent = 'Read Less';
+    } else {
+      hiddenContent.classList.add('hidden');
+      readMoreBtn.textContent = 'Read More';
+    }
+  }
+
+
+
+    handleDate();
+    handleTab();
+  </script>
+
+</body>
+
+</html>
