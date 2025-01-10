@@ -10,6 +10,9 @@
 :root {
     --primary-color: #FF6C39; /* Example primary color */
     --secondary-color: #2274E0; /* Example secondary color */
+    --secondary-color-light: #EBF5FE; /* Example secondary color */
+    --green-color: #19A060; /* Example secondary color */
+    --grey-color : #EFF5FD;
 }
 
 * {

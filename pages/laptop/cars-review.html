@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goibibo Cab Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="font-sans bg-[var(--grey-color)] relative">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto flex justify-between items-center px-7 py-3"
+      >
+        <div class="h-8 font-bold text-[var(--primary-color)]">
+          <img
+            class="h-full object-cover"
+            src="../../static/images/gobigo-logo.png"
+            alt=""
+          />
+        </div>
+        <nav class="flex space-x-6 items-center">
+          <a href="#" class="hover:text-[var(--primary-color)]">Flights</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Hotels</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Trains</a>
+          <a
+            href="#"
+            class="text-[var(--primary-color)] border-b-2 border-[var(--primary-color)]"
+            >Cabs</a
+          >
+          <a href="#" class="hover:text-[var(--primary-color)]">Bus</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Holidays</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Forex</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Insurance</a>
+        </nav>
+        <div class="flex space-x-4 items-center">
+          <a href="#" class="text-gray-600 hover:text-[var(--primary-color)]"
+            ><i class="ri-briefcase-3-line"></i> Manage Booking</a
+          >
+          <button
+            class="px-4 py-2 border border-[var(--secondary-color)] rounded flex items-center gap-3"
+          >
+            <div
+              class="h-8 w-8 bg-[var(--primary-color)] rounded-full flex items-center justify-center uppercase font-bold text-white"
+            >
+              p
+            </div>
+            <h3 class="text-sm">Hey, Pratham...</h3>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+
+    <!-- Header Section -->
+    <div class="bg-[var(--primary-color)] px-[20%] py-4">
+      <div class="flex items-end gap-3 text-white">
+        <div>
+          <h1 class="text-xs font-medium mb-1">TRIP TYPE</h1>
+          <input
+            type="text"
+            value="Hourly Rental"
+            readonly
+            class="font-[rubik] w-[13vw] h-[2.2rem] text-md p-3 pb-4 focus:border-none focus:outline-none leading-[1.38] font-bold rounded-lg text-black"
+          />
+        </div>
+        <div>
+          <h1 class="text-xs font-medium mb-1">FROM</h1>
+          <input
+            type="text"
+            value="Bhopal"
+            class="font-[rubik] w-[15vw] h-[2.2rem] text-md p-3 pb-4 focus:border-none focus:outline-none leading-[1.38] font-bold rounded-lg text-black"
+          />
+        </div>
+        <div>
+          <h1 class="text-xs font-medium mb-1">PICKUP DATE</h1>
+          <input
+            type="text"
+            value="10 Jan' 25"
+            readonly
+            class="font-[rubik] w-[7vw] h-[2.2rem] text-md p-3 pb-4 focus:border-none focus:outline-none leading-[1.38] font-bold rounded-lg text-black"
+          />
+        </div>
+        <div>
+          <h1 class="text-xs font-medium mb-1">PICKUP TIME</h1>
+          <input
+            type="text"
+            value="10:00 AM"
+            readonly
+            class="font-[rubik] w-[7vw] h-[2.2rem] text-md p-3 pb-4 focus:border-none focus:outline-none leading-[1.38] font-bold rounded-lg text-black"
+          />
+        </div>
+        <button
+          class="font-[rubik] text-lg uppercase px-6 py-2 pb-3 focus:border-none focus:outline-none leading-[1.38] font-bold rounded-lg text-[var(--secondary-color)] bg-white"
+        >
+          UPDATE SEARCH
+        </button>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div
+      class="container no-scrollbar relative mx-auto h-[130vh] overflow-y-auto my-5 px-[10%] flex gap-6"
+    >
+      <!-- Left Sidebar -->
+      <div class="sticky top-0 w-[30%]">
+        <!-- Why Book Section -->
+        <div class="bg-white rounded shadow p-4 mb-6">
+          <h2 class="text-lg font-bold font-[rubik] mb-3">
+            Why book Hourly Rental <br />
+            Cabs with us?
+          </h2>
+          <ul class="text-gray-600">
+            <li class="text-sm flex gap-3">
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                width="2.5rem"
+                height="20"
+                class="benefits-tick__BenefitsIcon-sc-j75bwu-0 hNIPxk"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="10"
+                    fill="#2276E3"
+                    fill-rule="nonzero"
+                    opacity="0.152"
+                  ></circle>
+                  <path
+                    d="M5.656 2.727l11.461 2.022-2.022 11.459-11.459-2.022z"
+                  ></path>
+                  <path
+                    fill="#2276E3"
+                    fill-rule="nonzero"
+                    d="M15.725 5.603a.605.605 0 00-.858-.011l-6.956 6.802L6.376 10.2a.604.604 0 00-1.066.076.603.603 0 00.073.618l1.945 2.778a.615.615 0 00.92.086l7.467-7.299a.606.606 0 00.01-.857z"
+                  ></path>
+                </g>
+              </svg>
+              <h3>
+                Lowest price for multiple stops within the city for the selected
+                package
+              </h3>
+            </li>
+            <li class="text-sm flex gap-3">
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                width="2.5rem"
+                height="20"
+                class="benefits-tick__BenefitsIcon-sc-j75bwu-0 hNIPxk"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="10"
+                    fill="#2276E3"
+                    fill-rule="nonzero"
+                    opacity="0.152"
+                  ></circle>
+                  <path
+                    d="M5.656 2.727l11.461 2.022-2.022 11.459-11.459-2.022z"
+                  ></path>
+                  <path
+                    fill="#2276E3"
+                    fill-rule="nonzero"
+                    d="M15.725 5.603a.605.605 0 00-.858-.011l-6.956 6.802L6.376 10.2a.604.604 0 00-1.066.076.603.603 0 00.073.618l1.945 2.778a.615.615 0 00.92.086l7.467-7.299a.606.606 0 00.01-.857z"
+                  ></path>
+                </g>
+              </svg>
+              <h3>
+                No hidden charges - Pay nothing extra than what's mentioned
+              </h3>
+            </li>
+            <li class="text-sm flex gap-3">
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                width="2.5rem"
+                height="20"
+                class="benefits-tick__BenefitsIcon-sc-j75bwu-0 hNIPxk"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="10"
+                    fill="#2276E3"
+                    fill-rule="nonzero"
+                    opacity="0.152"
+                  ></circle>
+                  <path
+                    d="M5.656 2.727l11.461 2.022-2.022 11.459-11.459-2.022z"
+                  ></path>
+                  <path
+                    fill="#2276E3"
+                    fill-rule="nonzero"
+                    d="M15.725 5.603a.605.605 0 00-.858-.011l-6.956 6.802L6.376 10.2a.604.604 0 00-1.066.076.603.603 0 00.073.618l1.945 2.778a.615.615 0 00.92.086l7.467-7.299a.606.606 0 00.01-.857z"
+                  ></path>
+                </g>
+              </svg>
+              <h3>
+                Experience & polite drivers with clean and comfortable cabs
+              </h3>
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="text-[var(--secondary-color)] text-sm mt-3 block mx-auto w-fit"
+            >know more</a
+          >
+        </div>
+
+        <!-- Filters Section -->
+        <div class="bg-white rounded shadow p-4">
+          <div class="flex w-full items-center justify-between">
+            <h3 class="text-lg font-semibold">Filters</h3>
+            <h4 class="uppercase text-xs text-gray-400">Clear</h4>
+          </div>
+          <h4 class="text-[12px] text-gray-500">Showing 5 Car variation</h4>
+
+          <div class="flex flex-col gap-10 my-4">
+            <hr />
+            <hr />
+          </div>
+
+          <!-- Price Filter -->
+          <div class="mb-6">
+            <div class="flex w-full mb-4 items-center justify-between">
+              <h3 class="text-md font-semibold">Price Filter</h3>
+              <h4 class="uppercase text-xs text-gray-400">Reset</h4>
+            </div>
+
+            <div class="w-full max-w-md mx-auto mt-8 flex flex-col">
+              <div class="relative">
+                <!-- Range Track -->
+                <div
+                  class="absolute top-1/2 left-0 w-full h-2 bg-gray-300 rounded-full transform -translate-y-1/2"
+                ></div>
+                <!-- Range Highlight -->
+                <div
+                  id="range-highlight"
+                  class="absolute top-1/2 h-2 bg-[var(--secondary-color)] rounded-full transform -translate-y-1/2"
+                ></div>
+                <!-- Left Thumb -->
+                <div
+                  id="thumb-left"
+                  class="absolute w-5 h-5 -translate-x-1/2 -translate-y-1/2 bg-white border-2 border-[var(--secondary-color)] rounded-full shadow-md cursor-pointer"
+                ></div>
+                <!-- Right Thumb -->
+                <div
+                  id="thumb-right"
+                  class="absolute w-5 h-5 -translate-x-1/2 -translate-y-1/2 bg-white border-2 border-[var(--secondary-color)] rounded-full shadow-md cursor-pointer"
+                ></div>
+              </div>
+              <!-- Value Labels -->
+              <div class="flex justify-between mt-5 text-sm">
+                <div id="value-left">₹2000</div>
+                <div id="value-right">₹2500</div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <!-- Car Model Filter -->
+          <div >
+            <div class="flex w-full mb-4 items-center justify-between">
+              <h3 class="text-md font-semibold">Car model</h3>
+              <h4 class="uppercase text-xs text-gray-400">Reset</h4>
+            </div>
+            <div class="space-y-2">
+              <div>
+                <input type="checkbox" id="wagonr" class="mr-1 scale-[1.5]" />
+                <label class="text-sm text-zinc-500" for="wagonr"
+                  >WagonR or similar</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="indica" class="mr-1 scale-[1.5]" />
+                <label class="text-sm text-zinc-500" for="indica"
+                  >Indica or similar</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="dzire" class="mr-1 scale-[1.5]" />
+                <label class="text-sm text-zinc-500" for="dzire"
+                  >Dzire or similar</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="etios" class="mr-1 scale-[1.5]" />
+                <label class="text-sm text-zinc-500" for="etios"
+                  >Etios or similar</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+
+          <!-- Passenger Capacity -->
+          <div>
+            <div class="flex w-full mb-4 items-center justify-between">
+              <h3 class="text-md font-semibold">Passenger capacity</h3>
+              <h4 class="uppercase text-xs text-gray-400">Reset</h4>
+            </div>
+            <div class="space-y-2">
+              <div>
+                <input type="checkbox" id="4-seats" class="mr-1 scale-[1.5]" />
+                <label class="text-sm text-zinc-500" for="4-seats"
+                  >4 passenger seats</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="6-seats" class="mr-1 scale-[1.5]" />
+                <label class="text-sm text-zinc-500" for="6-seats"
+                  >6 passenger seats</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="mt-4 px-4 py-3 bg-[#ffff] text-black font-bold shadow-lg rounded-lg w-full flex gap-2 justify-center items-center"
+        >
+          Back to Top
+          <div
+            class="bg-[var(--secondary-color)] w-5 aspect-square flex items-center justify-center rounded-full"
+          >
+            <svg
+              xmlns="https://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              width=".9rem"
+              height=".9rem"
+              fill="#fff"
+              class="ArrowTailUpIcon-sc-1k8lr1k-0 Namwd"
+            >
+              <path
+                d="M3.556 14.94l2.923 3.093 7.445-7.865v20.053h4.149V10.168l7.449 7.861 2.923-3.093L16.001 1.777 3.557 14.94z"
+              ></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-span-9 space-y-6">
+        <!-- Tabs -->
+        <div class="bg-white rounded-lg shadow p-2">
+          <div
+            class="no-scrollbar flex justify-between items-center overflow-x-auto gap-16"
+          >
+            <button
+              class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-4 rounded-lg border-[var(--secondary-color)] bg-[var(--secondary-color-light)]"
+            >
+              <div class="text-[var(--secondary-color)] font-bold">
+                2 hr (20 km)
+              </div>
+              <div class="text-[var(--secondary-color)] text-sm">₹1550</div>
+            </button>
+            <button class="flex flex-col items-center flex-shrink-0 gap-1">
+              <div class="text-zinc-700 font-bold">2 hr (20 km)</div>
+              <div class="text-zinc-700 text-sm">₹1550</div>
+            </button>
+            <button class="flex flex-col items-center flex-shrink-0 gap-1">
+              <div class="text-zinc-700 font-bold">2 hr (20 km)</div>
+              <div class="text-zinc-700 text-sm">₹1550</div>
+            </button>
+            <button class="flex flex-col items-center flex-shrink-0 gap-1">
+              <div class="text-zinc-700 font-bold">2 hr (20 km)</div>
+              <div class="text-zinc-700 text-sm">₹1550</div>
+            </button>
+            <button class="flex flex-col items-center flex-shrink-0 gap-1">
+              <div class="text-zinc-700 font-bold">2 hr (20 km)</div>
+              <div class="text-zinc-700 text-sm">₹1550</div>
+            </button>
+            <button class="flex flex-col items-center flex-shrink-0 gap-1">
+              <div class="text-zinc-700 font-bold">2 hr (20 km)</div>
+              <div class="text-zinc-700 text-sm">₹1550</div>
+            </button>
+            <button class="flex flex-col items-center flex-shrink-0 gap-1">
+              <div class="text-zinc-700 font-bold">2 hr (20 km)</div>
+              <div class="text-zinc-700 text-sm">₹1550</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card Example -->
+        <div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 p-6 rounded-lg shadow-lg mb-6">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-16 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-bold">
+                Indica, Wagon R
+                <span
+                  class="text-xs ml-3 font-light p-1 rounded-lg text-[var(--secondary-color)] bg-[var(--secondary-color-light)]"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-xs text-gray-600 mt-1">
+                <span class="px-2 py-1 border border-gray-200 rounded"
+                  >HATCHBACK</span
+                >
+                <span class="ml-3">AC</span>
+                <span class="ml-3 flex items-end">
+                  <img
+                    src="https://gos3.ibcdn.com/CabsPaxLuggageComboPaxIcon-1634902102.png"
+                    alt="cab amenities"
+                    style="height: 17px; padding-right: 2px"
+                  />
+                  4 seats</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 px-6 flex items-center justify-between">
+            <div class="w-[80%] border-r border-zinc-200 pr-4">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        162deg,
+                        rgb(244, 169, 0),
+                        rgb(248, 205, 70)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex items-center space-x-2">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <div class="h-6 w-[2px] bg-zinc-200"></div>
+                  <span
+                    class="text-white font-bold text-sm bg-[var(--green-color)] px-2 py-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-gray-700 space-y-2">
+                <li class="flex items-center gap-2">
+                  <span class=""
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  <span
+                    style="
+                      background: linear-gradient(
+                        270deg,
+                        rgb(244, 169, 0),
+                        rgb(248, 205, 70)
+                      );
+                    "
+                    class="text-sm p-1 rounded-sm inline-block"
+                  >
+                    Premium Services
+                  </span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Sanitiser
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Newspaper
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Route expert, Multilingual
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  10 kms included. After that ₹22.0/km
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  1 hrs included. After that ₹6.0/min
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Free cancellation until 1 hour before pickup
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Reserve this cab at ₹373 only
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col items-end text-right justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-gray-900">₹1500</h4>
+                <p class="text-xs text-gray-500 mb-3">+ ₹133 taxes & fees</p>
+              </div>
+              <button
+                class="bg-[var(--primary-color)] text-white font-semibold text-sm px-10 py-1 rounded"
+              >
+                SELECT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 p-6 rounded-lg shadow-lg mb-6">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-16 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-bold">
+                Indica, Wagon R
+                <span
+                  class="text-xs ml-3 font-light p-1 rounded-lg text-[var(--secondary-color)] bg-[var(--secondary-color-light)]"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-xs text-gray-600 mt-1">
+                <span class="px-2 py-1 border border-gray-200 rounded"
+                  >HATCHBACK</span
+                >
+                <span class="ml-3">AC</span>
+                <span class="ml-3 flex items-end">
+                  <img
+                    src="https://gos3.ibcdn.com/CabsPaxLuggageComboPaxIcon-1634902102.png"
+                    alt="cab amenities"
+                    style="height: 17px; padding-right: 2px"
+                  />
+                  4 seats</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 px-6 flex items-center justify-between">
+            <div class="w-[80%] border-r border-zinc-200 pr-4">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        162deg,
+                        rgb(244, 169, 0),
+                        rgb(248, 205, 70)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex items-center space-x-2">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <div class="h-6 w-[2px] bg-zinc-200"></div>
+                  <span
+                    class="text-white font-bold text-sm bg-[var(--green-color)] px-2 py-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-gray-700 space-y-2">
+                <li class="flex items-center gap-2">
+                  <span class=""
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  <span
+                    style="
+                      background: linear-gradient(
+                        270deg,
+                        rgb(244, 169, 0),
+                        rgb(248, 205, 70)
+                      );
+                    "
+                    class="text-sm p-1 rounded-sm inline-block"
+                  >
+                    Premium Services
+                  </span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Sanitiser
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Newspaper
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Route expert, Multilingual
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  10 kms included. After that ₹22.0/km
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  1 hrs included. After that ₹6.0/min
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Free cancellation until 1 hour before pickup
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Reserve this cab at ₹373 only
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col items-end text-right justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-gray-900">₹1500</h4>
+                <p class="text-xs text-gray-500 mb-3">+ ₹133 taxes & fees</p>
+              </div>
+              <button
+                class="bg-[var(--primary-color)] text-white font-semibold text-sm px-10 py-1 rounded"
+              >
+                SELECT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 p-6 rounded-lg shadow-lg mb-6">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-16 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-bold">
+                Indica, Wagon R
+                <span
+                  class="text-xs ml-3 font-light p-1 rounded-lg text-[var(--secondary-color)] bg-[var(--secondary-color-light)]"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-xs text-gray-600 mt-1">
+                <span class="px-2 py-1 border border-gray-200 rounded"
+                  >HATCHBACK</span
+                >
+                <span class="ml-3">AC</span>
+                <span class="ml-3 flex items-end">
+                  <img
+                    src="https://gos3.ibcdn.com/CabsPaxLuggageComboPaxIcon-1634902102.png"
+                    alt="cab amenities"
+                    style="height: 17px; padding-right: 2px"
+                  />
+                  4 seats</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 px-6 flex items-center justify-between">
+            <div class="w-[80%] border-r border-zinc-200 pr-4">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        162deg,
+                        rgb(244, 169, 0),
+                        rgb(248, 205, 70)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex items-center space-x-2">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <div class="h-6 w-[2px] bg-zinc-200"></div>
+                  <span
+                    class="text-white font-bold text-sm bg-[var(--green-color)] px-2 py-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-gray-700 space-y-2">
+                <li class="flex items-center gap-2">
+                  <span class=""
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  <span
+                    style="
+                      background: linear-gradient(
+                        270deg,
+                        rgb(244, 169, 0),
+                        rgb(248, 205, 70)
+                      );
+                    "
+                    class="text-sm p-1 rounded-sm inline-block"
+                  >
+                    Premium Services
+                  </span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Sanitiser
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Newspaper
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Route expert, Multilingual
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  10 kms included. After that ₹22.0/km
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  1 hrs included. After that ₹6.0/min
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Free cancellation until 1 hour before pickup
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-blue-500"
+                    ><span
+                      class="w-6 h-6 border border-zinc-400 rounded-full flex items-center justify-center"
+                      ><svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                      >
+                        <g fill-rule="nonzero" fill="none">
+                          <path
+                            d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                          ></path>
+                          <path
+                            d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                            fill="#647A97"
+                          ></path>
+                        </g></svg></span
+                  ></span>
+                  Reserve this cab at ₹373 only
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col items-end text-right justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-gray-900">₹1500</h4>
+                <p class="text-xs text-gray-500 mb-3">+ ₹133 taxes & fees</p>
+              </div>
+              <button
+                class="bg-[var(--primary-color)] text-white font-semibold text-sm px-10 py-1 rounded"
+              >
+                SELECT
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat this card for other cars -->
+      </div>
+    </div>
+
+    <footer class="bg-gray-100 border-t text-gray-800 px-56">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center md:text-left">
+            <h2 class="font-bold text-sm mb-2">Our Products</h2>
+            <ul class="">
+              <li>
+                <a href="#" class="hover:underline text-xs">Domestic Hotels</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >International Hotels</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Domestic Flights</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >International Flights</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Bus Booking</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >Train Ticket Booking</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Holiday Packages</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center md:text-left">
+            <h2 class="font-bold text-sm mb-2">Company</h2>
+            <ul class="">
+              <li><a href="#" class="hover:underline text-xs">About Us</a></li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">User Agreement</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Customer Support</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >Corporate Social Responsibility</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Blogs on Travel</a>
+              </li>
+              <li><a href="#" class="hover:underline text-xs">Careers</a></li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >Technology @ Goibibo</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center md:text-left">
+            <h2 class="font-bold text-sm mb-2">Travel Resources</h2>
+            <ul class="">
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >Popular Bus Routes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">PNR Status</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Airport Cabs</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Hotels in India</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">India Rail</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Goibibo Offers</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">City Guides</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center md:text-left">
+            <h2 class="font-bold text-sm mb-2">More Links</h2>
+            <ul class="">
+              <li>
+                <a href="#" class="hover:underline text-xs">Cheap Flights</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Flight Schedules</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >Popular Bus Cities</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Trains Near Me</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs">Hotels Near Me</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-xs"
+                  >Advertise with Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-7 border-zinc-300" />
+
+        <div class="w-full">
+          <p class="text-xs leading-5 opacity-[.8]">
+            Cabs from GhaziabadGhaziabad To Delhi Cabs |Ghaziabad To
+            Shahjahanpur Cabs |Ghaziabad To Agra Cabs |Ghaziabad To Bareilly
+            Cabs |Ghaziabad To Mumbai Cabs |Ghaziabad To Mussoorie Cabs
+            |Ghaziabad To Pilani Cabs |Ghaziabad To Mathura Cabs |Ghaziabad To
+            Auraiya Cabs |Ghaziabad To Ahmedabad CabsCabs from HaldwaniHaldwani
+            To Delhi Cabs |Haldwani To Shahjahanpur Cabs |Haldwani To Agra Cabs
+            |Haldwani To Bareilly Cabs |Haldwani To Mussoorie Cabs |Haldwani To
+            Mathura Cabs |Haldwani To Ahmedabad Cabs |Haldwani To Aligarh Cabs
+            |Haldwani To Varanasi Cabs |Haldwani To Ambala CabsCabs from
+            JodhpurJodhpur To Delhi Cabs |Jodhpur To Agra Cabs |Jodhpur To
+            Mumbai Cabs |Jodhpur To Mussoorie Cabs |Jodhpur To Pilani Cabs
+            |Jodhpur To Mathura Cabs |Jodhpur To Ahmedabad Cabs |Jodhpur To Bhuj
+            Cabs |Jodhpur To Jaisalmer Cabs |Jodhpur To Mount-abu CabsCabs from
+            ChandigarhChandigarh To Delhi Cabs |Chandigarh To Agra Cabs
+            |Chandigarh To Bareilly Cabs |Chandigarh To Mumbai Cabs |Chandigarh
+            To Mussoorie Cabs |Chandigarh To Pilani Cabs |Chandigarh To Mathura
+            Cabs |Chandigarh To Ahmedabad Cabs |Chandigarh To Dwarka Cabs
+            |Chandigarh To Bhuj CabsCabs from VishakhapatnamVishakhapatnam To
+            Tirupati Cabs |Vishakhapatnam To Bangalore Cabs |Vishakhapatnam To
+            Kolkata Cabs |Vishakhapatnam To Chennai Cabs |Vishakhapatnam To
+            Hyderabad Cabs |Vishakhapatnam To Bhubaneswar Cabs |Vishakhapatnam
+            To Durgapur Cabs |Vishakhapatnam To Raipur Cabs |Vishakhapatnam To
+            Puri Cabs |Vishakhapatnam To Cuttack CabsCabs from KolkataKolkata To
+            Delhi Cabs |Kolkata To Agra Cabs |Kolkata To Bareilly Cabs |Kolkata
+            To Mumbai Cabs |Kolkata To Mathura Cabs |Kolkata To Ahmedabad Cabs
+            |Kolkata To Jaisalmer Cabs |Kolkata To Porbandar Cabs |Kolkata To
+            Varanasi Cabs |Kolkata To Manali Cabs
+          </p>
+        </div>
+
+        <div
+          class="mt-8 flex flex-col items-center md:flex-row justify-between"
+        >
+          <div class="flex space-x-4 mb-4 md:mb-0">
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <!-- <path d="..."></path> -->
+              </svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <!-- <path d="..."></path> -->
+              </svg>
+            </a>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg mb-4">
+              Book Tickets Faster. Download our mobile Apps
+            </h2>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-gray-200 p-2 rounded-md">
+                <!-- <img src="google-play.svg" alt="Google Play"> -->
+              </a>
+              <a href="#" class="bg-gray-200 p-2 rounded-md">
+                <!-- <img src="app-store.svg" alt="App Store"> -->
+              </a>
+            </div>
+          </div>
+
+          <div class="flex space-x-4">
+            <!-- <img src="payment-logos.svg" alt="Payment Logos"> -->
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <p>&copy; 2023 Goibibo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+        const thumbLeft = document.getElementById("thumb-left");
+const thumbRight = document.getElementById("thumb-right");
+const rangeHighlight = document.getElementById("range-highlight");
+const valueLeft = document.getElementById("value-left");
+const valueRight = document.getElementById("value-right");
+
+// Initial values
+const min = 2000;
+const max = 2500;
+let leftValue = min;
+let rightValue = max;
+
+function updateUI() {
+  // Calculate positions as percentages
+  const leftPercent = ((leftValue - min) / (max - min)) * 100;
+  const rightPercent = ((rightValue - min) / (max - min)) * 100;
+
+  // Update thumbs and range highlight
+  thumbLeft.style.left = `${leftPercent}%`;
+  thumbRight.style.left = `${rightPercent}%`;
+  rangeHighlight.style.left = `${leftPercent}%`;
+  rangeHighlight.style.width = `${rightPercent - leftPercent}%`;
+
+  // Update values
+  valueLeft.textContent = `₹${leftValue}`;
+  valueRight.textContent = `₹${rightValue}`;
+}
+
+function setupDrag(thumb, isLeftThumb) {
+  thumb.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    const onMouseMove = (e) => {
+      const rect = thumb.parentNode.getBoundingClientRect();
+      const percent = ((e.clientX - rect.left) / rect.width) * 100;
+
+      if (isLeftThumb) {
+        leftValue = Math.min(
+          Math.max(min, Math.round(min + ((percent / 100) * (max - min)))),
+          rightValue - 1
+        );
+      } else {
+        rightValue = Math.max(
+          Math.min(max, Math.round(min + ((percent / 100) * (max - min)))),
+          leftValue + 1
+        );
+      }
+
+      updateUI();
+    };
+
+    const onMouseUp = () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+}
+
+// Initialize thumbs
+setupDrag(thumbLeft, true);
+setupDrag(thumbRight, false);
+
+// Initial UI update
+updateUI();
+
+    </script>
+
+
+  </body>
+</html>
