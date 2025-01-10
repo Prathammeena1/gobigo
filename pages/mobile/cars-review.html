@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabs - Book Online Cab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+
+  <body class="bg-[var(--grey-color)]">
+    <div class="max-w-md mx-auto bg-[var(--grey-color)] h-full rounded-md">
+      <!-- Header Section -->
+      <div class="bg-white py-4">
+        <div class="flex items-center px-4 justify-between mb-4">
+          <div class="flex items-center">
+            <div class="mr-4">
+              <img
+                class="w-full object-cover"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEvSURBVHgB7ZRBTsMwEEXHVlq2OQAFJ1ygV8gROAFwg7IgYtcsUUCiRygn4AjlBnABUiOyp+sWeZghAlVt2o6jdlGpb+PY8vzveMYDcGCvOEvLizj9/IrTj540Rks3knAfAYf0GSpUE2mckmxicRqy3wDEq/f7kyEIWWtgeuNQH7UeAfGSphPn4Nw+dF7Ag2CduGoHIxLv0jms07PE5pEFT9QKcaPbrREAmn/xO3/xWgNzU3a1gmcWR4A3nH4ndhCJk7rRIE7LcXXyRnK2yI+j+ZWaMsUQGoKIdnFtKckOVbLTK2LMLSXZzSV5OmMTCw2ofclcMVw5/AdswhXFlQXbMvgz4euh9vBUmQSvXGHgibRVZDT0q5m7LvLTAQgRGSya+PQjcTct8k7mSBgO7B0/Kp6FlTKSfj0AAAAASUVORK5CYII="
+                alt=""
+              />
+            </div>
+            <div class="">
+              <div class="flex items-end gap-1 mb-1">
+                <h2 class="text-lg font-semibold">Bhopal...</h2>
+                <div class="">
+                  <img
+                    class="w-full object-cover"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHWSURBVHgBrZXNbtNAEIBnd7zrzY8JaotySSS4IcSREw+AuOfAnTfoAa44V5DgRcgL8B5IHJBAAglFtIckuPWu94cdSw1Nagc17SdZsnY9n72zO2MGTYTAhq/m3TRRUttSKIlIw0amlSi983pV/vwwPm8KZdsD9/NvipnuwAPnsIPEOKddtdoWbwgP3pzeySrfg2tQ2NM/J28frq4Ij15/yXrJYR/2QAhefJ0eLum+Xtbo+EdnXxlRxVVRqtbCFEUGN4SZewPaTEZfhx11F26B0rgl56lXcEvQMeOVSrBpkjszRa8/obej9Zi1Y3T6I7dm2hQjVCm4NFI0TTLvXoAPj8G7GUlJxsDOYp6eMgjPm2KsQUygjYATADeLB2tM0iihIzaKwiUE/rItjMdEuqYJJ+XnWkoCCON/MpzUcw1QafI00VXLyzal/5ERVOeJtqlREtQuKRozWb9gB14PSiye9d2Be9INwFjbgwHxN127ZJS6X++zBYc890GeLeCGCDesG0Rdet/zByUVOOxJTx7FNsbqNraxzEd56Bfm5Fp1fbnTXBESo+PQqXCeXXTpNs7B+25MFa3u8njrRpCYpwtVqQIvqkkHZWVwNv4WzPzd8CzuY9iO+wsaZeD6jUDeQQAAAABJRU5ErkJggg=="
+                    alt=""
+                  />
+                </div>
+              </div>
+              <p class="text-xs">Hourly Rental | 10 Jan, 09:30 PM</p>
+            </div>
+          </div>
+          <div class="">
+            <img
+              class="w-full object-cover"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAL6SURBVHgBtVY9TBRBFH4zu3ccBLzbGCGniUChdsDRWfBX2EAhJtqZAKHUhFhZGgoT7aCwgwQ7jQlgoY0FCJ2FEEttzsKcEJO7807+7m7H9839yB275+16fsnuzszuzvfe997MPEENIJHMjRqmvKlsGhWkehRRBOOCKMW3XRJit5C3X0etwObf5hL1ifLTUopHxCTUGOK2TfNRy1whL4SJ5GGPlME1Jhogf2Di3FjUao3XvpC1A/tZNWXIwM4/kAFscGDnWzI/WfuiykN8YEpaoyZCCGO685x4foYQMsKzckI0ESmWN1aWtyIpx2zjP5ABkWI+lHhwQzZ6yMQqfNnL0dTSD7r+OEGL7366fKUGihwlwmLq+8PDV0nKHNk00ddKLz78opd8OUFK0hwSi9qvdx+/HlMiXaDhayGauxHWY+i7oAdcJmfNJHkEiJa3s/w80X149fbToW5f6Qq4/gcukwzRT8p94syxopGrIZZN8aQHenJ40RGSNDvUQRP9rXosy7KO97XRYHfQlVBKOSL20/mkU3YucAKU4xENG5RlYsRq8HJQS4jJO0J1d0YnpEwnMlgLsmH2LMYWI/sg1ZPbVl0PGkBEOo1CRuBixKjsDDCC3LT3AFdJl7aynBgZ3Ua82luEjh3knR1u52XQRj6QEnvpgutGjSyEZ7HuFh2vN5yJy1uZCjESZohl3/58RIlUQctfzxChaFN8T+YWhBRz5AEgRsaWlwUAFZBUz+6ed42zstWiZDnXySOwq2Di1fuduj/O/dV7F0rGHLj+By5ZLAtEnHwAsuLaYU8XSvvoIMvvgji4dJbatponn3h6x9JPyIz4wXsnoPTAs7Jy6yVPExDvCpu9aMg/Fpzc0lVYkyGKB/BYuV8hxIlcsO0H1GTkbJo5XUxV7TRRK7hCNjXF06JnNHPJMtdrxs+iVCZu+D0nedpdhKihMhHAh11hoxcWelwyKIRn+N+YE5k2pZFZcFLzop2UQvRLQQOnS32lRLyg7PfcXm+k1P8NGNNQ0nrw+94AAAAASUVORK5CYII="
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Hour Options -->
+        <div
+          class="no-scrollbar shadow-md py-2 mb-2 px-4 flex justify-between items-center overflow-x-auto gap-2"
+        >
+          <button
+            class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-3 rounded-lg bg-[var(--secondary-color)]"
+          >
+            <div class="text-white font-bold text-sm">2 hr (20 km)</div>
+            <div class="text-white text-xs">₹1550</div>
+          </button>
+          <button
+            class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-3 rounded-lg bg-[var(--secondary-color-light)]"
+          >
+            <div class="text-[var(--secondary-color)] font-bold text-sm">
+              2 hr (20 km)
+            </div>
+            <div class="text-zinc-500 text-xs">₹1550</div>
+          </button>
+          <button
+            class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-3 rounded-lg bg-[var(--secondary-color-light)]"
+          >
+            <div class="text-[var(--secondary-color)] font-bold text-sm">
+              2 hr (20 km)
+            </div>
+            <div class="text-zinc-500 text-xs">₹1550</div>
+          </button>
+          <button
+            class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-3 rounded-lg bg-[var(--secondary-color-light)]"
+          >
+            <div class="text-[var(--secondary-color)] font-bold text-sm">
+              2 hr (20 km)
+            </div>
+            <div class="text-zinc-500 text-xs">₹1550</div>
+          </button>
+          <button
+            class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-3 rounded-lg bg-[var(--secondary-color-light)]"
+          >
+            <div class="text-[var(--secondary-color)] font-bold text-sm">
+              2 hr (20 km)
+            </div>
+            <div class="text-zinc-500 text-xs">₹1550</div>
+          </button>
+          <button
+            class="flex flex-col items-center flex-shrink-0 gap-1 border py-1 px-3 rounded-lg bg-[var(--secondary-color-light)]"
+          >
+            <div class="text-[var(--secondary-color)] font-bold text-sm">
+              2 hr (20 km)
+            </div>
+            <div class="text-zinc-500 text-xs">₹1550</div>
+          </button>
+        </div>
+      </div>
+
+      <div class="main space-y-3">
+        <div class="bg-white shadow-lg px-4 rounded-lg mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 py-2">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-8 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-md font-bold">
+                Indica, Wagon R
+                <span class="text-xs font-semibold p-1 rounded-lg"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-[11px]">
+                <span class="rounded mr-1">HATCHBACK</span> |
+                <span class="mx-1">AC</span> |
+                <span class="mx-1"> 4 passengers allowed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 flex items-center justify-between">
+            <div class="w-full">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        4.46741rad,
+                        rgb(0, 195, 255),
+                        rgb(17, 73, 243)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex flex-col-reverse items-end">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <span
+                    class="text-white font-bold text-xs bg-[var(--green-color)] px-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start mt-4">
+                <ul class="text-[12px] text-gray-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Sanitiser
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Newspaper
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    1 hrs included. After that ₹6.0/min
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Free cancellation until 1 hour before pickup
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Reserve this cab at ₹373 only
+                  </li>
+                </ul>
+
+                <div
+                  class="flex flex-col w-32 items-end text-right justify-between"
+                >
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-900">₹1500</h4>
+                    <p class="text-xs text-gray-500 mb-3">
+                      + ₹133 taxes & fees
+                    </p>
+                  </div>
+                  <button
+                    class="bg-[var(--primary-color)] text-white font-semibold text-sm px-4 py-1 rounded"
+                  >
+                    SELECT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg px-4 rounded-lg mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 py-2">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-8 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-md font-bold">
+                Indica, Wagon R
+                <span class="text-xs font-semibold p-1 rounded-lg"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-[11px]">
+                <span class="rounded mr-1">HATCHBACK</span> |
+                <span class="mx-1">AC</span> |
+                <span class="mx-1"> 4 passengers allowed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 flex items-center justify-between">
+            <div class="w-full">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        4.46741rad,
+                        rgb(0, 195, 255),
+                        rgb(17, 73, 243)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex flex-col-reverse items-end">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <span
+                    class="text-white font-bold text-xs bg-[var(--green-color)] px-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start mt-4">
+                <ul class="text-[12px] text-gray-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Sanitiser
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Newspaper
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    1 hrs included. After that ₹6.0/min
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Free cancellation until 1 hour before pickup
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Reserve this cab at ₹373 only
+                  </li>
+                </ul>
+
+                <div
+                  class="flex flex-col w-32 items-end text-right justify-between"
+                >
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-900">₹1500</h4>
+                    <p class="text-xs text-gray-500 mb-3">
+                      + ₹133 taxes & fees
+                    </p>
+                  </div>
+                  <button
+                    class="bg-[var(--primary-color)] text-white font-semibold text-sm px-4 py-1 rounded"
+                  >
+                    SELECT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg px-4 rounded-lg mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 py-2">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-8 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-md font-bold">
+                Indica, Wagon R
+                <span class="text-xs font-semibold p-1 rounded-lg"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-[11px]">
+                <span class="rounded mr-1">HATCHBACK</span> |
+                <span class="mx-1">AC</span> |
+                <span class="mx-1"> 4 passengers allowed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 flex items-center justify-between">
+            <div class="w-full">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        4.46741rad,
+                        rgb(0, 195, 255),
+                        rgb(17, 73, 243)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex flex-col-reverse items-end">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <span
+                    class="text-white font-bold text-xs bg-[var(--green-color)] px-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start mt-4">
+                <ul class="text-[12px] text-gray-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Sanitiser
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Newspaper
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    1 hrs included. After that ₹6.0/min
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Free cancellation until 1 hour before pickup
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Reserve this cab at ₹373 only
+                  </li>
+                </ul>
+
+                <div
+                  class="flex flex-col w-32 items-end text-right justify-between"
+                >
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-900">₹1500</h4>
+                    <p class="text-xs text-gray-500 mb-3">
+                      + ₹133 taxes & fees
+                    </p>
+                  </div>
+                  <button
+                    class="bg-[var(--primary-color)] text-white font-semibold text-sm px-4 py-1 rounded"
+                  >
+                    SELECT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show more -->
+          <div class="">
+            <div class="my-4 flex justify-between items-center">
+              <h3 class="font-bold text-sm">
+                1 more option <span class="font-light">available</span>
+              </h3>
+              <div
+                class="flex items-center text-[var(--secondary-color)] text-xs font-bold"
+              >
+                <h3>SHOW ALL</h3>
+                <div class="">
+                  <img
+                    class="w-full object-cover"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHWSURBVHgBrZXNbtNAEIBnd7zrzY8JaotySSS4IcSREw+AuOfAnTfoAa44V5DgRcgL8B5IHJBAAglFtIckuPWu94cdSw1Nagc17SdZsnY9n72zO2MGTYTAhq/m3TRRUttSKIlIw0amlSi983pV/vwwPm8KZdsD9/NvipnuwAPnsIPEOKddtdoWbwgP3pzeySrfg2tQ2NM/J28frq4Ij15/yXrJYR/2QAhefJ0eLum+Xtbo+EdnXxlRxVVRqtbCFEUGN4SZewPaTEZfhx11F26B0rgl56lXcEvQMeOVSrBpkjszRa8/obej9Zi1Y3T6I7dm2hQjVCm4NFI0TTLvXoAPj8G7GUlJxsDOYp6eMgjPm2KsQUygjYATADeLB2tM0iihIzaKwiUE/rItjMdEuqYJJ+XnWkoCCON/MpzUcw1QafI00VXLyzal/5ERVOeJtqlREtQuKRozWb9gB14PSiye9d2Be9INwFjbgwHxN127ZJS6X++zBYc890GeLeCGCDesG0Rdet/zByUVOOxJTx7FNsbqNraxzEd56Bfm5Fp1fbnTXBESo+PQqXCeXXTpNs7B+25MFa3u8njrRpCYpwtVqQIvqkkHZWVwNv4WzPzd8CzuY9iO+wsaZeD6jUDeQQAAAABJRU5ErkJggg=="
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                background: linear-gradient(
+                  0.204642rad,
+                  rgb(17, 73, 243),
+                  rgb(0, 195, 255)
+                );
+              "
+              class="w-fit text-xs font-bold text-white px-2 py-1 rounded-full"
+            >
+              DIESEL @ ₹2781
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg px-4 rounded-lg mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 py-2">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-8 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-md font-bold">
+                Indica, Wagon R
+                <span class="text-xs font-semibold p-1 rounded-lg"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-[11px]">
+                <span class="rounded mr-1">HATCHBACK</span> |
+                <span class="mx-1">AC</span> |
+                <span class="mx-1"> 4 passengers allowed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 flex items-center justify-between">
+            <div class="w-full">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        4.46741rad,
+                        rgb(0, 195, 255),
+                        rgb(17, 73, 243)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex flex-col-reverse items-end">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <span
+                    class="text-white font-bold text-xs bg-[var(--green-color)] px-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start mt-4">
+                <ul class="text-[12px] text-gray-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Sanitiser
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Newspaper
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    1 hrs included. After that ₹6.0/min
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Free cancellation until 1 hour before pickup
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Reserve this cab at ₹373 only
+                  </li>
+                </ul>
+
+                <div
+                  class="flex flex-col w-32 items-end text-right justify-between"
+                >
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-900">₹1500</h4>
+                    <p class="text-xs text-gray-500 mb-3">
+                      + ₹133 taxes & fees
+                    </p>
+                  </div>
+                  <button
+                    class="bg-[var(--primary-color)] text-white font-semibold text-sm px-4 py-1 rounded"
+                  >
+                    SELECT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg px-4 rounded-lg mx-auto pb-6">
+          <!-- Top Section -->
+          <div class="flex items-center gap-4 py-2">
+            <img
+              src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+              alt="Car Image"
+              class="h-8 object-cover rounded"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="text-md font-bold">
+                Indica, Wagon R
+                <span class="text-xs font-semibold p-1 rounded-lg"
+                  >Or Similar</span
+                >
+              </h2>
+              <div class="flex items-center text-[11px]">
+                <span class="rounded mr-1">HATCHBACK</span> |
+                <span class="mx-1">AC</span> |
+                <span class="mx-1"> 4 passengers allowed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="mt-4 flex items-center justify-between">
+            <div class="w-full">
+              <div class="flex w-full justify-between">
+                <h3
+                  class="text-sm font-bold text-gray-900 flex items-center gap-3"
+                >
+                  <div
+                    style="
+                      background: linear-gradient(
+                        4.46741rad,
+                        rgb(0, 195, 255),
+                        rgb(17, 73, 243)
+                      );
+                    "
+                    class="h-5 w-[5px] rounded-md"
+                  ></div>
+                  Economical car
+                </h3>
+                <div class="flex flex-col-reverse items-end">
+                  <span class="text-xs text-gray-600">28 ratings</span>
+                  <span
+                    class="text-white font-bold text-xs bg-[var(--green-color)] px-1 rounded"
+                  >
+                    4.1 / 5
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start mt-4">
+                <ul class="text-[12px] text-gray-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Sanitiser
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Newspaper
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    1 hrs included. After that ₹6.0/min
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Free cancellation until 1 hour before pickup
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-blue-500"
+                      ><span
+                        class="w-4 h-4 border border-zinc-400 rounded-full flex items-center justify-center"
+                        ><svg
+                          xmlns="https://www.w3.org/2000/svg"
+                          width="15"
+                          height="15"
+                          class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                        >
+                          <g fill-rule="nonzero" fill="none">
+                            <path
+                              d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                            ></path>
+                            <path
+                              d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                              fill="#647A97"
+                            ></path>
+                          </g></svg></span
+                    ></span>
+                    Reserve this cab at ₹373 only
+                  </li>
+                </ul>
+
+                <div
+                  class="flex flex-col w-32 items-end text-right justify-between"
+                >
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-900">₹1500</h4>
+                    <p class="text-xs text-gray-500 mb-3">
+                      + ₹133 taxes & fees
+                    </p>
+                  </div>
+                  <button
+                    class="bg-[var(--primary-color)] text-white font-semibold text-sm px-4 py-1 rounded"
+                  >
+                    SELECT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show more -->
+          <div class="">
+            <div class="my-4 flex justify-between items-center">
+              <h3 class="font-bold text-sm">
+                1 more option <span class="font-light">available</span>
+              </h3>
+              <div
+                class="flex items-center text-[var(--secondary-color)] text-xs font-bold"
+              >
+                <h3>SHOW ALL</h3>
+                <div class="">
+                  <img
+                    class="w-full object-cover"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHWSURBVHgBrZXNbtNAEIBnd7zrzY8JaotySSS4IcSREw+AuOfAnTfoAa44V5DgRcgL8B5IHJBAAglFtIckuPWu94cdSw1Nagc17SdZsnY9n72zO2MGTYTAhq/m3TRRUttSKIlIw0amlSi983pV/vwwPm8KZdsD9/NvipnuwAPnsIPEOKddtdoWbwgP3pzeySrfg2tQ2NM/J28frq4Ij15/yXrJYR/2QAhefJ0eLum+Xtbo+EdnXxlRxVVRqtbCFEUGN4SZewPaTEZfhx11F26B0rgl56lXcEvQMeOVSrBpkjszRa8/obej9Zi1Y3T6I7dm2hQjVCm4NFI0TTLvXoAPj8G7GUlJxsDOYp6eMgjPm2KsQUygjYATADeLB2tM0iihIzaKwiUE/rItjMdEuqYJJ+XnWkoCCON/MpzUcw1QafI00VXLyzal/5ERVOeJtqlREtQuKRozWb9gB14PSiye9d2Be9INwFjbgwHxN127ZJS6X++zBYc890GeLeCGCDesG0Rdet/zByUVOOxJTx7FNsbqNraxzEd56Bfm5Fp1fbnTXBESo+PQqXCeXXTpNs7B+25MFa3u8njrRpCYpwtVqQIvqkkHZWVwNv4WzPzd8CzuY9iO+wsaZeD6jUDeQQAAAABJRU5ErkJggg=="
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                background: linear-gradient(
+                  0.204642rad,
+                  rgb(17, 73, 243),
+                  rgb(0, 195, 255)
+                );
+              "
+              class="w-fit text-xs font-bold text-white px-2 py-1 rounded-full"
+            >
+              DIESEL @ ₹2781
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="my-12">
+        <div class="px-4">
+          <h3 class="font-bold text-sm">Why book with us ?</h3>
+          <ul class="text-[12px] text-gray-700 space-y-4 my-4">
+            <li class="flex items-center gap-3">
+              <span class=""
+                ><span
+                  class="w-4 h-4 border border-[var(--green-color)] rounded-full flex items-center justify-center"
+                  ><svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                  >
+                    <g fill-rule="nonzero" fill="none">
+                      <path
+                        d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                      ></path>
+                      <path
+                        d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                        fill="var(--green-color)"
+                      ></path>
+                    </g></svg></span
+              ></span>
+              <h3 class="text-[rgb(100, 122, 151)] leading-4 font-medium">
+                Lowest price for multiple stops within the city within selected
+                package
+              </h3>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class=""
+                ><span
+                  class="w-4 h-4 border border-[var(--green-color)] rounded-full flex items-center justify-center"
+                  ><svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                  >
+                    <g fill-rule="nonzero" fill="none">
+                      <path
+                        d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                      ></path>
+                      <path
+                        d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                        fill="var(--green-color)"
+                      ></path>
+                    </g></svg></span
+              ></span>
+              <h3 class="text-[rgb(100, 122, 151)] leading-4 font-medium">
+                Lowest price for multiple stops within the city within selected
+                package
+              </h3>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class=""
+                ><span
+                  class="w-4 h-4 border border-[var(--green-color)] rounded-full flex items-center justify-center"
+                  ><svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    class="Icon-back__IconBack-sc-188zz4k-0 foOEKI"
+                  >
+                    <g fill-rule="nonzero" fill="none">
+                      <path
+                        d="M3.674 1.822l10.505 1.852-1.852 10.505-10.505-1.853z"
+                      ></path>
+                      <path
+                        d="M12.902 4.457a.555.555 0 00-.785-.008l-6.378 6.234-1.407-2.011a.555.555 0 10-.91.637l1.782 2.546a.566.566 0 00.843.078l6.847-6.69a.555.555 0 00.008-.786z"
+                        fill="var(--green-color)"
+                      ></path>
+                    </g></svg></span
+              ></span>
+              <h3 class="text-[rgb(100, 122, 151)] leading-4 font-medium">
+                Lowest price for multiple stops within the city within selected
+                package
+              </h3>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="flex bg-white shadow-sm rounded-lg items-center justify-center gap-2 mx-2 p-2"
+        >
+          <div class="w-8">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAwUExURUdwTCN45CJ25CJ35CJ35CJ25CJ35CR45iyD8CJ35CN45SN45SR65yN35SJ35CJ24wRUyj4AAAAPdFJOUwCApPSU5dEwC7pGVx5odNqNm0YAAAGoSURBVEjHY2AYBRiA/dK0YNNM3QJc8pvi/4PBV22s0hxP/8NBXAMWBcL/kYAhpnzZfxSQji7PZ4+q4PMDNAX+/9HAF1R5lv8YwAG/AWhGcP/HAjYgKWjFpiACSYE+NgWfkOIAzBeEAyGIigJUPyhgmIjwRzN2BRZw/n7sVvzGFwqoIZGPXcE3uIJ47Aq+whXYY1fwGYeCb941HccvxSMryIf5AuR8kwNgMa75SFbMh4eD/v8vB6CCXPnfUL0JUfB1AQPHllTjTCkGhhaEN9cjrIhh4HGGJezlqEEN8dkBhsdQZhZS0DPBFXxn6ISzL6BFNyQCOebD2X+xJJivDYxIAYKURw/Do6ceSUECQgEv3AnIie8Xkh3yECEDDnvsiZKBE2ooO/bohiuYwIU9NuFBhVvBeqgVPLisgKZKA5SkgZw742Eek8fuTYjjJ8V/YTiPpGACQgE4gNUZ2G/DgwzkRqSgZgNyfdDzMXJknf//9QVGWYOsYP1PRGmxFabgJ5KC3gIsBernBlxFcp1m2pRnQBUL8Bbs19DLOQyw7X8Agcph24TRChIBAHG+4znHR32+AAAAAElFTkSuQmCC"
+              alt=""
+            />
+          </div>
+          <div>
+            <h1 class="text-sm font-bold">Frequently Asked Questions</h1>
+            <h3 class="text-xs text-zinc-500">
+              Most common user concern and answers
+            </h3>
+          </div>
+          <div class="flex items-center text-[var(--secondary-color)] text-xs">
+            <h3>View all</h3>
+            <div class="">
+              <img
+                class="w-full object-cover"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHWSURBVHgBrZXNbtNAEIBnd7zrzY8JaotySSS4IcSREw+AuOfAnTfoAa44V5DgRcgL8B5IHJBAAglFtIckuPWu94cdSw1Nagc17SdZsnY9n72zO2MGTYTAhq/m3TRRUttSKIlIw0amlSi983pV/vwwPm8KZdsD9/NvipnuwAPnsIPEOKddtdoWbwgP3pzeySrfg2tQ2NM/J28frq4Ij15/yXrJYR/2QAhefJ0eLum+Xtbo+EdnXxlRxVVRqtbCFEUGN4SZewPaTEZfhx11F26B0rgl56lXcEvQMeOVSrBpkjszRa8/obej9Zi1Y3T6I7dm2hQjVCm4NFI0TTLvXoAPj8G7GUlJxsDOYp6eMgjPm2KsQUygjYATADeLB2tM0iihIzaKwiUE/rItjMdEuqYJJ+XnWkoCCON/MpzUcw1QafI00VXLyzal/5ERVOeJtqlREtQuKRozWb9gB14PSiye9d2Be9INwFjbgwHxN127ZJS6X++zBYc890GeLeCGCDesG0Rdet/zByUVOOxJTx7FNsbqNraxzEd56Bfm5Fp1fbnTXBESo+PQqXCeXXTpNs7B+25MFa3u8njrRpCYpwtVqQIvqkkHZWVwNv4WzPzd8CzuY9iO+wsaZeD6jUDeQQAAAABJRU5ErkJggg=="
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
