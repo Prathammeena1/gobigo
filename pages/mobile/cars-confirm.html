@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabs - Book Online Cab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div class="flex items-center space-x-3 p-4 bg-gray-100 fixed z-10 top-0 w-full">
+      <button class="text-blue-500">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <h1 class="text-lg font-bold">Review booking</h1>
+    </div>
+
+    <div class="p-4 mt-12 mb-36">
+      <!-- Booking Info -->
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <p class="text-sm text-gray-500">One-way trip</p>
+        <p class="font-bold">
+          Bhopal, Madhya Pradesh... - Indore, Madhya... <br />
+          27 Jan, 10:00 AM
+        </p>
+      </div>
+
+      <!-- Car Info -->
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4 relative">
+        <div class="flex items-start">
+          <img
+            src="https://gos3.ibcdn.com/hatchback_v_5_copy-1576142454.png"
+            alt="Car"
+            class="h-12 object-cover rounded-md mr-3"
+          />
+          <div>
+            <div class="flex items-center space-x-2">
+              <h2 class="font-bold">Maruti Suzuki WagonR</h2>
+              <span
+                class="text-xs bg-[#528AAE] text-white font-semibold p-1 px-2 rounded absolute top-0 right-0"
+                >NEW</span
+              >
+            </div>
+            <p class="text-sm text-gray-400">
+              Hatchback | AC | 4 passengers allowed
+            </p>
+          </div>
+        </div>
+        <div class="mt-3 space-y-2">
+          <p class="text-xs font-bold">
+            <span class="font-medium text-gray-400">Fuel Type:</span> CNG
+          </p>
+          <p class="text-xs font-bold">
+            <span class="font-medium text-gray-400">Cancellation Policy:</span>
+            Full refund, till 27 Jan 9:00 am
+          </p>
+          <p class="text-xs font-bold">
+            <span class="font-medium text-gray-400">Extra Kms Charges:</span> Rs
+            25.0/Km after 190 Kms
+          </p>
+          <p class="text-xs font-bold">
+            <span class="font-medium text-gray-400">Luggage:</span> 1 small bag
+          </p>
+        </div>
+      </div>
+
+      <!-- Login Offer -->
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4 flex items-center">
+        <div
+          class="w-10 h-10 rounded-full flex items-center justify-center mr-3"
+        >
+          <img src="https://gos3.ibcdn.com/promo-1611154218.png" alt="" />
+        </div>
+        <p class="flex-1 text-sm font-bold">
+          Login to avail the best deals and discounts
+        </p>
+        <a href="#" class="text-[var(--secondary-color)] font-bold"
+          >Login Now</a
+        >
+      </div>
+
+      <!-- Offers -->
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div class="flex items-center gap-3">
+          <div class="">
+            <img
+              class="h-6 object-cover"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+          </div>
+          <div>
+            <h3 class="text-md font-bold">Offers</h3>
+            <p class="text-xs text-gray-400">No ongoing offers currently</p>
+          </div>
+        </div>
+
+        <div class="flex w-full pl-9 mt-4 justify-between items-center">
+          <h3 class="text-sm text-[var(--secondary-color)] font-medium">
+            Apply promocode/voucher
+          </h3>
+          <svg
+            class="w-5 h-5 transform rotate-90 text-gray-500 transition-transform"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Contact Details Section -->
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div class="flex items-center mb-3">
+          <div
+            class="w-6 h-6 text-blue-500 rounded-full flex items-center justify-center mr-2"
+          >
+            <img
+              src="https://gos3.ibcdn.com/contact_details-1611154096.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2 class="text-sm font-bold">Your Contact details</h2>
+            <p class="text-sm text-gray-400">
+              Tickets will be shared to given contact
+            </p>
+          </div>
+        </div>
+
+        <!-- Gender Selection -->
+        <div class="flex items-center justify-end space-x-10 mb-4">
+          <label class="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="gender"
+              class="w-4 h-4 border-gray-300 focus:ring-blue-500"
+            />
+            <span class="text-sm text-gray-700">Male</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="gender"
+              class="w-4 h-4 border-gray-300 focus:ring-blue-500"
+            />
+            <span class="text-sm text-gray-700">Female</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="gender"
+              class="w-4 h-4 border-gray-300 focus:ring-blue-500"
+            />
+            <span class="text-sm text-gray-700">Other</span>
+          </label>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="space-y-3 flex flex-col items-end">
+          <input
+            type="text"
+            placeholder="Enter full name"
+            class="w-[90%] border border-gray-300 rounded-lg px-4 font-bold py-2 text-sm border-none focus:outline-none focus:border-none placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+          />
+          <input
+            type="email"
+            placeholder="Enter mail id"
+            class="w-[90%] border border-gray-300 rounded-lg px-4 font-bold py-2 text-sm border-none focus:outline-none focus:border-none placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+          />
+          <div class="flex items-center w-[85%] space-x-2">
+            <span class="text-sm font-bold text-gray-700">+91</span>
+            <input
+              type="text"
+              placeholder="Enter mobile number"
+              class="w-full border border-gray-300 rounded-lg px-4 font-bold py-2 text-sm border-none focus:outline-none focus:border-none placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Pickup Location Section -->
+      <div class="bg-white rounded-lg shadow-lg p-4">
+        <div class="flex items-center mb-3">
+          <div
+            class="w-6 h-6 bg-zinc-100 text-green-500 rounded-full flex items-center justify-center mr-2"
+          >
+            <img
+              src="https://gos3.ibcdn.com/ask_location-1611154150.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2 class="text-sm font-bold">Your Pickup location</h2>
+            <p class="text-xs text-gray-500">
+              Our driver will reach at this location to pick you up
+            </p>
+          </div>
+        </div>
+
+        <!-- Pickup Address -->
+        <div
+          class="bg-gray-100 rounded-lg px-4 py-3 flex justify-between items-center mb-3"
+        >
+          <p class="text-sm text-gray-700 truncate">
+            Bhopal, Madhya Pradesh, India...
+          </p>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-gray-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Billing Address Checkbox -->
+        <label class="flex items-center space-x-2">
+          <input
+            onclick="toggleAddress()"
+            type="checkbox"
+            class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+          />
+          <span class="text-sm text-gray-700"
+            >Use this as billing address for tax invoice</span
+          >
+        </label>
+      </div>
+
+      <div id="addAddress" class="relative mt-4">
+        <div class="bg-white p-4 rounded shadow">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">Your Pincode And State</h2>
+            <button id="editButton" class="text-blue-500 hover:underline">
+              Edit
+            </button>
+          </div>
+          <p class="text-gray-600 mb-2">
+            Required for GST purpose on your tax invoice.
+          </p>
+          <div id="editForm" class="grid grid-cols-1 gap-4 hidden">
+            <input
+              type="text"
+              id="billingAddress"
+              class="border border-gray-300 rounded p-2 w-full"
+              placeholder="Enter Billing Address"
+            />
+            <input
+              type="text"
+              id="pincode"
+              class="border border-gray-300 rounded p-2 w-full"
+              placeholder="Enter Pincode"
+            />
+
+            <div class="relative">
+              <select
+                id="state"
+                class="border border-gray-300 rounded p-2 w-full appearance-none"
+              >
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                {/* Add other states as needed */}
+              </select>
+              <div
+                class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 fill-current text-gray-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <label class="inline-flex items-center">
+              <input type="checkbox" class="form-checkbox" />
+              <span class="ml-2"
+                >Confirm and save billing details to your profile</span
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Price and Actions -->
+    <div class="bg-white rounded-lg shadow-lg p-2 fixed z-10 bottom-0 w-full">
+     <div class="flex justify-between">
+        <div class="flex justify-between flex-col  mb-4">
+            <p class="text-lg font-bold">₹ 2581</p>
+            <p class="text-xs text-gray-500">Includes tolls & taxes</p>
+          </div>
+          <div class="flex justify-between flex-col items-end  mb-4">
+            <p class="font-bold text-[var(--secondary-color)]">Pay ₹563 Now</p>
+            <p class="text-xs text-gray-500">Remaining to driver</p>
+          </div>
+     </div>
+      <button
+        class="w-full bg-[var(--primary-color)] text-white font-bold text-md py-3 rounded-lg shadow hover:bg-orange-600 transition"
+      >
+        Pay ₹563 & confirm now
+      </button>
+    </div>
+
+    <script>
+      const editButton = document.getElementById("editButton");
+      const editForm = document.getElementById("editForm");
+      const cancelButton = document.getElementById("cancelButton");
+
+      editButton.addEventListener("click", () => {
+        editForm.classList.toggle("hidden");
+      });
+
+      const addAddress = document.getElementById("addAddress");
+      console.log(addAddress);
+
+      function toggleAddress() {
+        addAddress.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
