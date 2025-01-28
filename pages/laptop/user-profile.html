@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goibibo Cab Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="font-sans bg-[var(--grey-color)]">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-7 py-3">
+      <div class="h-8 font-bold text-[var(--primary-color)]">
+        <img class="h-full object-cover" src="../../static/images/gobigo-logo.png" alt="" />
+      </div>
+      <nav class="flex space-x-6 items-center">
+        <a href="#" class="hover:text-[var(--primary-color)]">Flights</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Hotels</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Trains</a>
+        <a href="#" class="text-[var(--primary-color)] border-b-2 border-[var(--primary-color)]">Cabs</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Bus</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Holidays</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Forex</a>
+        <a href="#" class="hover:text-[var(--primary-color)]">Insurance</a>
+      </nav>
+      <div class="flex space-x-4 items-center">
+        <a href="#" class="text-gray-600 hover:text-[var(--primary-color)]"><i class="ri-briefcase-3-line"></i> Manage
+          Booking</a>
+        <button class="px-4 py-2 border border-[var(--secondary-color)] rounded flex items-center gap-3">
+          <div
+            class="h-8 w-8 bg-[var(--primary-color)] rounded-full flex items-center justify-center uppercase font-bold text-white">
+            p
+          </div>
+          <h3 class="text-sm">Hey, Pratham...</h3>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <div class="w-full h-full bg-[url(https://gos3.ibcdn.com/gi-orange-theme-bg-1693817290.png)] bg-no-repeat bg-contain bg-top">
+
+    <h1 class="max-w-3xl py-5 text-xl text-white font-bold mx-auto">My Profile</h1>
+      <div class="max-w-3xl mx-auto space-y-4 ">
+        <!-- Profile Header -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center gap-6">
+                <div class="flex flex-col items-center gap-4">
+                    <div class="w-32 h-32 rounded-full bg-[#F26B3A] text-white flex items-center justify-center text-3xl font-medium">
+                        K
+                    </div>
+                    <h3 class="text-sm text-[var(--secondary-color)] font-bold " >Add Profile Photo</h3>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-bold text-2xl">Karan Choudhary</h2>
+                    <p class="text-sm text-gray-500">747052xxxx</p>
+                    <p class="text-sm text-gray-500">kc701789@gmail.com</p>
+                    <div class="mt-14">
+                        <div class="h-2 bg-gray-200 rounded-full mt-1">
+                            <div class="h-full w-[35%] bg-[#F26B3A] rounded-full"></div>
+                        </div>
+                        <div class="text-sm text-gray-500">Your profile is just <span class="text-[#F26B3A]">35%</span> complete.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Personal Information -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="font-medium mb-4">Personal Information</h3>
+            <div class="space-y-4">
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Gender</label>
+                    <div class="flex gap-4 mt-1">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="male" checked class="text-[#F26B3A] focus:ring-[#F26B3A]">
+                            <span class="ml-2">Male</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="female" class="text-[#F26B3A] focus:ring-[#F26B3A]">
+                            <span class="ml-2">Female</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="others" class="text-[#F26B3A] focus:ring-[#F26B3A]">
+                            <span class="ml-2">Others</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                        <input type="text" value="747052xxxx" readonly class="mt-1 block w-full focus:outline-none focus:border-none rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A] bg-gray-50">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Email ID</label>
+                        <div class="flex gap-2">
+                            <input type="email" value="kc701789@gmail.com" class="mt-1 block w-full focus:outline-none focus:border-none rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A]">
+                            <button class="mt-1 px-4 py-2 border border-gray-300 rounded-md text-blue-600 hover:bg-gray-50">verify</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input type="text" value="Karan Choudhary" class="mt-1 block w-full focus:outline-none focus:border-none rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Enter Last Name</label>
+                        <input type="text" placeholder="Enter Last Name" class="mt-1 block w-full focus:outline-none focus:border-none rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A]">
+                    </div>
+                </div>
+    
+                
+    
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 bg-[#F26B3A] text-white rounded-md w-[10vw] hover:bg-[#E25B2A]">Save</button>
+                    <button class="px-4 py-2 border border-[var(--secondary-color)] text-[var(--secondary-color)] font-bold rounded-md w-[10vw] hover:bg-gray-50">Cancel</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Billing Information -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="font-medium mb-4">Billing Information</h3>
+            <div class="bg-orange-50 border border-orange-200 p-3 rounded-lg mb-4">
+                <p class="text-sm text-gray-600">As per government directive Billing address is compulsory for all bookings.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Enter Billing Address</label>
+                        <input type="text" placeholder="Enter Billing Address" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Enter Pincode</label>
+                        <input type="text" placeholder="Enter Pincode" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A]">
+                    </div>
+                </div>
+    
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">State</label>
+                    <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F26B3A] focus:ring-[#F26B3A]">
+                        <option>Madhya Pradesh</option>
+                        <!-- Add other states as needed -->
+                    </select>
+                </div>
+    
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 bg-[#F26B3A] text-white rounded-md w-[10vw] hover:bg-[#E25B2A]">Save</button>
+                    <button class="px-4 py-2 border border-[var(--secondary-color)] text-[var(--secondary-color)] font-bold rounded-md w-[10vw] hover:bg-gray-50">Cancel</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Manage Devices -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center justify-between cursor-pointer" id="manageDevicesHeader">
+                <h3 class="font-medium">Manage Devices</h3>
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </div>
+            <div class="hidden mt-4" id="manageDevicesContent">
+                <!-- Add device management content here -->
+            </div>
+        </div>
+    
+        <!-- App Promotion -->
+        <div class="bg-white rounded-lg shadow p-6 flex items-end gap-4 justify-between">
+           <img class="w-40 object-cover" src="https://gos3.ibcdn.com/gi-app-1660799492.png" alt="">
+           <img class="w-36 object-cover" src="https://gos3.ibcdn.com/play-store-1643533487.png" alt="">
+           <img class="w-36 object-cover" src="https://gos3.ibcdn.com/app-store-1643533521.png" alt="">
+           <img class="w-24 object-cover" src="https://gos3.ibcdn.com/mweb2app-desktop-inline-profileDesktop-1662981968.jpeg" alt="">
+        </div>
+    
+        <!-- Logout Button -->
+        <div class="flex justify-center py-4">
+            <button class="px-4 py-2 border border-gray-300 rounded-md text-blue-600 hover:bg-gray-50">
+                LOGOUT
+            </button>
+        </div>
+    </div>
+  </div>
+
+
+  <footer class="bg-gray-100 text-gray-800 px-56">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">Our Products</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">Domestic Hotels</a></li>
+            <li><a href="#" class="hover:underline text-xs ">International Hotels</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Domestic Flights</a></li>
+            <li><a href="#" class="hover:underline text-xs ">International Flights</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Bus Booking</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Train Ticket Booking</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Holiday Packages</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">Company</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">About Us</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Terms of Service</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Privacy Policy</a></li>
+            <li><a href="#" class="hover:underline text-xs ">User Agreement</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Customer Support</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Corporate Social Responsibility</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Blogs on Travel</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Careers</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Technology @ Goibibo</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">Travel Resources</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">Popular Bus Routes</a></li>
+            <li><a href="#" class="hover:underline text-xs ">PNR Status</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Airport Cabs</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Hotels in India</a></li>
+            <li><a href="#" class="hover:underline text-xs ">India Rail</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Goibibo Offers</a></li>
+            <li><a href="#" class="hover:underline text-xs ">City Guides</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="font-bold text-sm mb-2">More Links</h2>
+          <ul class="">
+            <li><a href="#" class="hover:underline text-xs ">Cheap Flights</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Flight Schedules</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Popular Bus Cities</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Trains Near Me</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Hotels Near Me</a></li>
+            <li><a href="#" class="hover:underline text-xs ">Advertise with Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-7 border-zinc-300">
+
+      <div class="w-full">
+        <p class="text-xs leading-5 opacity-[.8]">
+          Cabs from GhaziabadGhaziabad To Delhi Cabs |Ghaziabad To Shahjahanpur Cabs |Ghaziabad To Agra Cabs |Ghaziabad
+          To Bareilly Cabs |Ghaziabad To Mumbai Cabs |Ghaziabad To Mussoorie Cabs |Ghaziabad To Pilani Cabs |Ghaziabad
+          To Mathura Cabs |Ghaziabad To Auraiya Cabs |Ghaziabad To Ahmedabad CabsCabs from HaldwaniHaldwani To Delhi
+          Cabs |Haldwani To Shahjahanpur Cabs |Haldwani To Agra Cabs |Haldwani To Bareilly Cabs |Haldwani To Mussoorie
+          Cabs |Haldwani To Mathura Cabs |Haldwani To Ahmedabad Cabs |Haldwani To Aligarh Cabs |Haldwani To Varanasi
+          Cabs |Haldwani To Ambala CabsCabs from JodhpurJodhpur To Delhi Cabs |Jodhpur To Agra Cabs |Jodhpur To Mumbai
+          Cabs |Jodhpur To Mussoorie Cabs |Jodhpur To Pilani Cabs |Jodhpur To Mathura Cabs |Jodhpur To Ahmedabad Cabs
+          |Jodhpur To Bhuj Cabs |Jodhpur To Jaisalmer Cabs |Jodhpur To Mount-abu CabsCabs from ChandigarhChandigarh To
+          Delhi Cabs |Chandigarh To Agra Cabs |Chandigarh To Bareilly Cabs |Chandigarh To Mumbai Cabs |Chandigarh To
+          Mussoorie Cabs |Chandigarh To Pilani Cabs |Chandigarh To Mathura Cabs |Chandigarh To Ahmedabad Cabs
+          |Chandigarh To Dwarka Cabs |Chandigarh To Bhuj CabsCabs from VishakhapatnamVishakhapatnam To Tirupati Cabs
+          |Vishakhapatnam To Bangalore Cabs |Vishakhapatnam To Kolkata Cabs |Vishakhapatnam To Chennai Cabs
+          |Vishakhapatnam To Hyderabad Cabs |Vishakhapatnam To Bhubaneswar Cabs |Vishakhapatnam To Durgapur Cabs
+          |Vishakhapatnam To Raipur Cabs |Vishakhapatnam To Puri Cabs |Vishakhapatnam To Cuttack CabsCabs from
+          KolkataKolkata To Delhi Cabs |Kolkata To Agra Cabs |Kolkata To Bareilly Cabs |Kolkata To Mumbai Cabs |Kolkata
+          To Mathura Cabs |Kolkata To Ahmedabad Cabs |Kolkata To Jaisalmer Cabs |Kolkata To Porbandar Cabs |Kolkata To
+          Varanasi Cabs |Kolkata To Manali Cabs
+        </p>
+
+      </div>
+
+      <div class="mt-8 flex flex-col items-center md:flex-row justify-between">
+        <div class="flex space-x-4 mb-4 md:mb-0">
+          <a href="#" class="text-gray-500 hover:text-gray-700">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <!-- <path d="..."></path> -->
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-700">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <!-- <path d="..."></path> -->
+            </svg>
+          </a>
+        </div>
+
+        <div>
+          <h2 class="font-bold text-lg mb-4">Book Tickets Faster. Download our mobile Apps</h2>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-gray-200 p-2 rounded-md">
+              <!-- <img src="google-play.svg" alt="Google Play"> -->
+            </a>
+            <a href="#" class="bg-gray-200 p-2 rounded-md">
+              <!-- <img src="app-store.svg" alt="App Store"> -->
+            </a>
+          </div>
+        </div>
+
+        <div class="flex space-x-4">
+          <!-- <img src="payment-logos.svg" alt="Payment Logos"> -->
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p>&copy; 2023 Goibibo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
