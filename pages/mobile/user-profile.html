@@ -10,7 +10,9 @@
 
   <body class="bg-gray-100">
     <!-- Header -->
-    <div class="flex items-center space-x-3 p-4 bg-gray-100 fixed z-10 top-0 w-full">
+    <div
+      class="flex items-center space-x-3 p-4 bg-gray-100 fixed z-10 top-0 w-full"
+    >
       <button class="text-blue-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,138 +32,324 @@
       <h1 class="text-lg font-bold">Profile</h1>
     </div>
 
-    <div class="max-w-md mx-auto pt-2 mt-14 px-2 bg-gray-300 min-h-screen">
-        <!-- Profile Section -->
-        <div class=" bg-white rounded-lg mt-2 p-4">
-            <div class="flex items-start gap-3">
-                <!-- Profile Picture -->
-                <div class="relative">
-                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-                        <span class="text-2xl text-white">P</span>
-                    </div>
-                    <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full border border-gray-200 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M19 4h-3.5A2.5 2.5 0 0 0 13 6.5V8h7v-.5A3.5 3.5 0 0 0 16.5 4z"/>
-                            <path d="M5 4h3.5A2.5 2.5 0 0 1 11 6.5V8H4v-.5A3.5 3.5 0 0 1 7.5 4z"/>
-                            <path d="M19 12v3.5a2.5 2.5 0 0 1-2.5 2.5H14v-7h7v1z"/>
-                            <path d="M5 12v3.5A2.5 2.5 0 0 0 7.5 18H10v-7H3v1z"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Profile Info -->
-                <div class="flex-1">
-                    <div class="flex items-start justify-between">
-                        <h1 class="text-xl font-semibold">Pratham meena</h1>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-gray-600">+91 81038 65927</p>
-                    <p class="text-sm text-gray-600">yashmeena274@gmail.com</p>
-                </div>
+    <div class="max-w-md mx-auto pt-2 pb-20 mt-14 px-2 bg-gray-300 min-h-screen">
+      <!-- Profile Section -->
+      <div class="bg-white shadow rounded-lg mt-2 p-4">
+        <div class="flex items-start gap-3">
+          <!-- Profile Picture -->
+          <div class="relative">
+            <div
+              class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center"
+            >
+              <span class="text-2xl text-white">P</span>
             </div>
-
-            <!-- Profile Completion -->
-            <div class="mt-6">
-                <div class="flex justify-between items-center mb-2">
-                    <p class="text-sm text-gray-600">Your profile is just 35% complete.</p>
-                    <a href="#" class="text-[var(--secondary-color)] font-bold text-xs">Add Email</a>
-                </div>
-                <div class="h-1 w-full bg-gray-100 rounded-full">
-                    <div class="h-full w-[35%] bg-orange-500 rounded-full"></div>
-                </div>
+            <div
+              class="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full border border-gray-200 flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-gray-500"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19 4h-3.5A2.5 2.5 0 0 0 13 6.5V8h7v-.5A3.5 3.5 0 0 0 16.5 4z"
+                />
+                <path
+                  d="M5 4h3.5A2.5 2.5 0 0 1 11 6.5V8H4v-.5A3.5 3.5 0 0 1 7.5 4z"
+                />
+                <path d="M19 12v3.5a2.5 2.5 0 0 1-2.5 2.5H14v-7h7v1z" />
+                <path d="M5 12v3.5A2.5 2.5 0 0 0 7.5 18H10v-7H3v1z" />
+              </svg>
             </div>
+          </div>
+
+          <!-- Profile Info -->
+          <div class="flex-1">
+            <div class="flex items-start justify-between">
+              <h1 class="text-xl font-semibold">Pratham meena</h1>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="text-sm text-gray-600">+91 81038 65927</p>
+            <p class="text-sm text-gray-600">yashmeena274@gmail.com</p>
+          </div>
         </div>
 
-        <!-- goTribe Section -->
-        <div class=" bg-white rounded-lg mt-2  p-4  flex items-center justify-between">
-            <div class="">
-                <span class="px-2 py-1 text-xs rounded ">
-                    <img class="rounded-full w-16" src="https://go-assets.ibcdn.com/u/GI/images/1714975777692-nongotribe_large.png" alt="">
-                </span>
-                <span class="text-sm text-gray-600">Travel and Save more</span>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l6-6-6-6"/>
+        <!-- Profile Completion -->
+        <div class="mt-6">
+          <div class="flex justify-between items-center mb-2">
+            <p class="text-sm text-gray-600">
+              Your profile is just 35% complete.
+            </p>
+            <a href="#" class="text-[var(--secondary-color)] font-bold text-xs"
+              >Add Email</a
+            >
+          </div>
+          <div class="h-1 w-full bg-gray-100 rounded-full">
+            <div class="h-full w-[35%] bg-orange-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- goTribe Section -->
+      <div
+        class="bg-white shadow rounded-lg mt-2 p-4 flex items-center justify-between"
+      >
+        <div class="">
+          <span class="px-2 py-1 text-xs rounded">
+            <img
+              class="rounded-full w-16"
+              src="https://go-assets.ibcdn.com/u/GI/images/1714975777692-nongotribe_large.png"
+              alt=""
+            />
+          </span>
+          <span class="text-sm text-gray-600">Travel and Save more</span>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 text-gray-400"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </div>
+
+      <!-- Go Cash Balance -->
+      <div class="bg-white shadow rounded-lg mt-2 p-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <h2 class="font-bold text-xs">Go Cash Balance</h2>
+            <p class="text-sm text-gray-600">Reward cash & refund amounts</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold">₹0</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 18l6-6-6-6" />
             </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Items -->
+      <div class="bg-white shadow rounded-lg mt-2">
+        <!-- My Trips -->
+        <div class="p-4 flex items-center gap-4">
+          <div class="p-2 bg-gray-50 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-sm">My Trips</h3>
+            <p class="text-xs text-gray-600">Your bookings and trips</p>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-gray-400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
 
-        <!-- Go Cash Balance -->
-        <div class=" bg-white rounded-lg mt-2 p-4 ">
-            <div class="flex justify-between items-center">
-                <div>
-                    <h2 class="font-medium">Go Cash Balance</h2>
-                    <p class="text-sm text-gray-600">Reward cash & refund amounts</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="font-medium">₹0</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </div>
-            </div>
+        <!-- Recommend & Earn -->
+        <div class="p-4 flex items-center gap-4">
+          <div class="p-2 bg-gray-50 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-sm">Recommend & Earn</h3>
+            <p class="text-xs text-gray-600">
+              Recommend your hotel stay & earn goCash
+            </p>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-gray-400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
 
-        <!-- Navigation Items -->
-        <div class=" bg-white rounded-lg mt-2 ">
-            <!-- My Trips -->
-            <div class="p-4 flex items-center gap-4">
-                <div class="p-2 bg-gray-50 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                    </svg>
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-medium">My Trips</h3>
-                    <p class="text-sm text-gray-600">Your bookings and trips</p>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 18l6-6-6-6"/>
-                </svg>
-            </div>
-
-            <!-- Recommend & Earn -->
-            <div class="p-4 flex items-center gap-4">
-                <div class="p-2 bg-gray-50 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-medium">Recommend & Earn</h3>
-                    <p class="text-sm text-gray-600">Recommend your hotel stay & earn goCash</p>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 18l6-6-6-6"/>
-                </svg>
-            </div>
-
-            <!-- Student Go Pass -->
-            <div class="p-4 flex items-center gap-4">
-                <div class="p-2 bg-gray-50 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                    </svg>
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-medium">Student Go Pass</h3>
-                    <p class="text-sm text-gray-600">Claim additional discount now</p>
-                </div>
-                <span class="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-md">Unverified</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 18l6-6-6-6"/>
-                </svg>
-            </div>
+        <!-- Student Go Pass -->
+        <div class="p-4 flex items-center gap-4">
+          <div class="p-2 bg-gray-50 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path
+                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+              />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-sm">Student Go Pass</h3>
+            <p class="text-xs text-gray-600">Claim additional discount now</p>
+          </div>
+          <span class="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-md"
+            >Unverified</span
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-gray-400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
+      </div>
     </div>
 
+    <nav class="fixed bottom-0 left-0 right-0 bg-[#282D32] px-4 py-2">
+      <div class="max-w-md mx-auto flex justify-between items-center">
+        <!-- Home -->
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-white"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          </svg>
+          <span class="text-xs text-white mt-1">Home</span>
+        </a>
 
+        <!-- goCash -->
+        <a href="#" class="flex flex-col items-center relative">
+          <div class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M7 15h0M2 9.5h20" />
+            </svg>
+            <div
+              class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+            >
+              0
+            </div>
+          </div>
+          <span class="text-xs text-white mt-1">goCash</span>
+        </a>
 
+        <!-- Offers -->
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-white"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+            />
+            <line x1="7" y1="7" x2="7.01" y2="7" />
+          </svg>
+          <span class="text-xs text-white mt-1">Offers</span>
+        </a>
+
+        <!-- My Trips -->
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-white"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span class="text-xs text-white mt-1">My Trips</span>
+        </a>
+
+        <!-- Student -->
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-white"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <span class="text-xs text-white mt-1">Student</span>
+        </a>
+      </div>
+    </nav>
   </body>
 </html>
