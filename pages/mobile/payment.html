@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-[var(--secondary-color)] text-white px-4 py-3 flex items-center justify-between fixed top-0 w-full">
+        <div class="flex items-center gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            <span class="text-xl font-bold">Payment</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-bold">08:45</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-14 pb-4 bg-gray-200">
+        <!-- Total Due -->
+        <div class="p-1 px-4 bg-white border-b">
+            <div class="flex justify-between items-center">
+                <h2 class="text-sm font-bold">Total Due: ₹ 726</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Trip Details -->
+        <div class="p-4 bg-white border-b">
+            <div class="flex gap-3">
+                <div class="w-10 h-10  rounded-lg flex items-center justify-center">
+                    <img src="https://gos3.ibcdn.com/mWebPaymentsCabIcon-1629226877.png" alt="">
+                </div>
+                <div>
+                    <h3 class="font-bold">Bhopal - Indore (One Way)</h3>
+                    <p class="text-xs text-gray-500">Pickup: 30 Jan 2025 (Thu) • 10:00 AM</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cab Details -->
+        <div class="px-2 py-1 rounded-md bg-white border-b flex items-center gap-3 m-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+                <div class="font-bold text-xs">Cab & Driver details</div>
+                <div class="text-xs text-gray-500">will be shared by 30 Jan 2025 at 9:30 AM</div>
+            </div>
+        </div>
+
+        <!-- Payment Options -->
+        <div class=" bg-white">
+            <h3 class="px-4 py-3 text-xs font-bold">ALL PAYMENT OPTIONS</h3>
+            
+            <!-- UPI Options -->
+            <div class="flex items-center justify-between p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8  rounded flex items-center justify-center">
+                       <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm">UPI Options</div>
+                        <div class="text-xs text-gray-500">Pay directly from your Bank Account</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
+            <!-- Credit/Debit Card -->
+            <div class="flex items-center justify-between p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8  rounded flex items-center justify-center">
+                        <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm">Credit/Debit/ATM Card</div>
+                        <div class="text-xs text-gray-500">Visa, MasterCard, Amex, Rupay and more</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
+            <!-- Book Now Pay Later -->
+            <div class="flex items-center justify-between p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="Simpl" class="w-8 h-8 rounded"/>
+                    <div>
+                        <div class="font-bold text-sm">Book Now Pay Later</div>
+                        <div class="text-xs text-gray-500">Lazypay, Simpl, HDFC, ICICI, IDFC</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
+            <!-- Net Banking -->
+            <div class="flex items-center justify-between p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded flex items-center justify-center">
+                        <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm">Net Banking</div>
+                        <div class="text-xs text-gray-500">40+ Banks Available</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
+            <!-- EMI -->
+            <div class="flex items-center justify-between p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded flex items-center justify-center">
+                       <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm">EMI</div>
+                        <div class="text-xs text-gray-500">Credit/Debit Card EMI available</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
+            <!-- Mobile Wallets -->
+            <div class="flex items-center justify-between p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded flex items-center justify-center">
+                        <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm">Mobile Wallets</div>
+                        <div class="text-xs text-gray-500">AmazonPay, Mobikwik</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
