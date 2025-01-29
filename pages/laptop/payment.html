@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center max-w-6xl py-3">
+          <div class="h-8 font-bold flex items-center text-[var(--primary-color)]">
+            <img class="h-1/2 object-cover" src="../../static/images/gobigo-logo.png" alt="" />
+          </div>
+          
+        </div>
+      </header>
+
+    <div class="max-w-6xl mx-auto p-4 flex flex-col md:flex-row gap-4">
+        <!-- Left Section -->
+        <div class="flex-1">
+            <div class="flex items-center justify-between mb-6">
+                <h1 class="text-3xl font-bold">Pay  <span class="text-orange-500">₹ 726</span> to confirm booking</h1>
+                <div class="text-sm text-gray-500 flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    Time Left: 19:42
+                </div>
+            </div>
+
+            <!-- Trip Details -->
+            <div class="bg-blue-50 border border-blue-100  p-4 rounded-lg mb-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-2 rounded-lg">
+                        <img src="https://gos3.ibcdn.com/mWebPaymentsCabIcon-1629226877.png" alt="">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold">Bhopal</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14m-7-7l7 7-7 7"/>
+                            </svg>
+                            <span class="font-bold">Indore</span>
+                            <span class="text-sm ">(One Way) 201 Km</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Pickup: 30 Jan 2025 10:00 AM
+                            <span class="ml-2">Dzire, Etios Or Similar( AC,4 passengers allowed )</span>
+                        </div>
+                    </div>
+                    <button class="text-[var(--secondary-color)] text-sm font-medium">Show details</button>
+                </div>
+                <hr class="my-5 ml-16">
+                <div class="flex items-center gap-2 ml-16 text-sm font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    Pratham meena
+                    <span class="mx-2">|</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13"/>
+                        <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                    yashmeena274@gmail.com, +918103865927
+                </div>
+            </div>
+
+            <!-- Payment Options -->
+            <div class="bg-white rounded-lg border">
+                <h2 class="p-4 border-b font-bold">ALL PAYMENT OPTIONS</h2>
+                
+                <!-- UPI Options -->
+                <div class="p-4 border-b flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8  rounded-md flex items-center justify-center">
+                            <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-bold">UPI Options</div>
+                            <div class="text-sm text-gray-500">Pay directly from your Bank Account</div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+
+                <!-- Credit/Debit/ATM Card -->
+                <div class="p-4 border-b flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8  rounded-md flex items-center justify-center">
+                           <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/card_paymode.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-bold">Credit/Debit/ATM Card</div>
+                            <div class="text-sm text-gray-500">Visa, MasterCard, Amex, Rupay and more</div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+
+                <div class="p-4 border-b flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8  rounded-md flex items-center justify-center">
+                            <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-bold">UPI Options</div>
+                            <div class="text-sm text-gray-500">Pay directly from your Bank Account</div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+
+                <!-- Credit/Debit/ATM Card -->
+                <div class="p-4 border-b flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8  rounded-md flex items-center justify-center">
+                           <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/card_paymode.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-bold">Credit/Debit/ATM Card</div>
+                            <div class="text-sm text-gray-500">Visa, MasterCard, Amex, Rupay and more</div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+
+                <div class="p-4 border-b flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8  rounded-md flex items-center justify-center">
+                            <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/upi_paymode.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-bold">UPI Options</div>
+                            <div class="text-sm text-gray-500">Pay directly from your Bank Account</div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+
+                <!-- Credit/Debit/ATM Card -->
+                <div class="p-4 border-b flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8  rounded-md flex items-center justify-center">
+                           <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/paymodes_gi/card_paymode.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-bold">Credit/Debit/ATM Card</div>
+                            <div class="text-sm text-gray-500">Visa, MasterCard, Amex, Rupay and more</div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+
+                <!-- Similar structure for other payment options -->
+                <!-- Book Now Pay Later, Net Banking, EMI, Mobile Wallets, GooglePay, PhonePe -->
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-full md:w-80">
+            <div class="bg-white rounded-lg border p-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-medium">Grand Total</span>
+                    <span class="text-green-600">₹ 726</span>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                    <span>Fare</span>
+                    <span>₹ 726</span>
+                </div>
+            </div>
+
+            <!-- Cab & Driver details -->
+            <div class="bg-white rounded-lg border p-4 mb-4">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    Cab & Driver details
+                </div>
+                <div class="text-xs text-gray-500 mt-1">
+                    will be shared by 30 Jan 2025 at 9:30 AM
+                </div>
+            </div>
+
+            <!-- Included Benefits -->
+            <div class="bg-white rounded-lg border p-4">
+                <h3 class="font-medium mb-3">Included Benefits</h3>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <div>
+                            <div class="text-sm">Free Cancellation</div>
+                            <div class="text-xs text-gray-500">Till 30 Jan 2025, 9:00 AM</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <div>
+                            <div class="text-sm">Free waiting</div>
+                            <div class="text-xs text-gray-500">Upto 45 minutes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 max-w-md">
+                <div class="flex justify-between gap-2 items-start">
+                    <div>
+                        <div class="space-y-1">
+                            <h2 class="text-lg font-bold">Scan to Pay</h2>
+                            <p class="text-xs text-gray-500">Instant Refund & High Success Rate</p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-4">
+                            <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/cb/upi_qr/bhim.png" alt="Google Pay" class="h-6"/>
+                            <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/cb/upi_qr/paytm.png" alt="Paytm" class="h-6"/>
+                            <img src="https://imgak.mmtcdn.com/payment-ui-service/images/payment/cb/upi_qr/phonepe.png" alt="PhonePe" class="h-6"/>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABy0lEQVR42uXVMbKkIBAG4DbBK0giV4MEr4AJYCJX0ASupolcQZPupWp2XtVM9bvAbmdfoH8jDQJ9FvzzRujrvlBZsobAOVw2LLfwc0XWetrkMQqQl+BtwYOWtNlfPGF3Q7j0Lw7X0K9eKPrJ/zQI+6p3/59udU2r11b9rP/D2HpZVlB72nfOtGwTQleik0dgjCPAAK6naCoxpjzOeXo2UNixPqxCK/qy72tgjC5c3T1RzeEhzto8T727vSbWlL2TJ23e+okzjtP5pJ2WWogzxRllLdm0JwLj9r3FvDrw/WqIc7en9JTbjWPPWoNEAVO6YeJM6OXSem55knW0YXW2z9byvn04V++E9Yb1AYNoeU8EFxhjX3I4o0ooN9YyxaFPZ7nmkxhTHMbRusHJhTVaU1E4k9IqOVPBodsUpfzK+zZqYV0o9TlLIc5TBhnHdip1z5kObZ3w6iwoWWfZdsurBbvX/H8bTar1EnP0M3GOris3AMxL5YxuOtG2vUZQnNsLdZd9qO/5+3KbNxUH2+2Hfc/fp0ONBv28Db5jre0AAsJzgw+8fWh555MN8dZzQTva/u99+OVweRXlrQf1Wu+3W79ocqDb7Jz/r//RH9ty5JltyrrlAAAAAElFTkSuQmCC" alt="QR Code" class="border-2 w-24 border-gray-200 rounded-lg"/>
+                        <button class="mt-2 text-blue-500 text-sm font-medium">VIEW QR</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t mt-8 py-4">
+        <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg class="w-4 h-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                </div>
+                <div class="text-sm">
+                    <div class="font-medium text-green-600">SECURE PAYMENT</div>
+                    <div class="text-xs text-gray-500">100% RBI Compliant</div>
+                </div>
+            </div>
+            <div class="text-xs text-gray-500">
+                By proceeding, You accept Goibibo's
+                <a href="#" class="text-blue-600">User Agreement</a>,
+                <a href="#" class="text-blue-600">Terms of Service</a>, and
+                <a href="#" class="text-blue-600">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
