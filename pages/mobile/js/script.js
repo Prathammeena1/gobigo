@@ -102,6 +102,31 @@ function reverseLocations(pickupId, dropId) {
 }
 
 
+function openModal() {
+  document.getElementById('loginModal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('loginModal').classList.add('hidden');
+}
+
+function validateInput() {
+  const input = document.getElementById('phoneInput').value;
+  const button = document.getElementById('continueBtn');
+  if (input.length >= 10) {
+      button.classList.remove('bg-gray-400', 'cursor-not-allowed');
+      button.classList.add('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer');
+      button.removeAttribute('disabled');
+  } else {
+      button.classList.add('bg-gray-400', 'cursor-not-allowed');
+      button.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer');
+      button.setAttribute('disabled', true);
+  }
+}
+
+
+
+
 
 
 
